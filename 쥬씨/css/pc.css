@@ -1,0 +1,60 @@
+@media screen and (min-width: 769px) {
+  body {
+    font-size: 22px;
+    background-color: rgba(255, 0, 0, 0.6);
+  }
+  h2 {
+    color: #fff;
+  }
+  /* header */
+  header {
+    position: relative;
+    display: flex;
+    background-color: #fff;
+    color: #ff001e;
+    align-items: center;
+    height: 5rem;
+  }
+  header ul {
+    display: flex;
+  }
+  .gnb {
+    position: absolute;
+    right: 0;
+    width: 10%;
+    line-height: 2.5rem;
+  }
+  nav{
+    width: 100%;
+    margin: 0 10% 0 5%;
+  }
+  .mainMenu {
+    width: 80%;
+    flex: 1;
+  }
+  /* item area */
+  .itemList {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .itemList li {
+    text-align: center;
+    width: 33.33%;
+  }
+  .itemList li p {
+    color: #ff001e;
+    font-weight: 600;
+  }
+  .itemList li img{
+    width: 60%;
+    height: 80%;
+  }
+  /* footer area */
+  .sns {
+    justify-content: center;
+    gap: 10%;
+  }
+  .footerMenu {
+    margin-left: 10%;
+  }
+}

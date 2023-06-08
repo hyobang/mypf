@@ -1,0 +1,322 @@
+@import url(./reset.css);
+
+@font-face {
+  font-family: sans-serif;
+  src: url(./font/SANSSERIFCOLLECTION.TTF);
+}
+
+.flex {
+  display: flex;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+section {
+  height: 100vh;
+}
+
+/*-----------------------------------------------------------------------*/
+
+#sect1 {
+  .inner {
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+
+    figure {
+      width: 450px;
+      img {
+        width: 100%;
+      }
+    }
+    .text {
+      width: 40%;
+      h1 {
+        font-size: 2rem;
+        letter-spacing: 10px;
+        padding-bottom: 50px;
+        img {
+          width: 20px;
+        }
+      }
+      p {
+        letter-spacing: 5px;
+      }
+    }
+  }
+}
+
+#sect2 {
+  background: url(./img/sect2.jpg) no-repeat center / cover;
+  position: relative;
+  .inner {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    h1 {
+      font-size: 2.5rem;
+      letter-spacing: 10px;
+      padding-bottom: 100px;
+      img {
+        width: 20px;
+      }
+    }
+    p {
+      letter-spacing: 6px;
+      line-height: 50px;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+#sect3 {
+  background: url(./img/sect3.jpg) no-repeat center / cover;
+  position: relative;
+  .inner {
+    position: absolute;
+    
+
+    top: 15%;
+    left: 7%;
+    h1 {
+      font-size: 2.5rem;
+      letter-spacing: 10px;
+      padding-bottom: 100px;
+      img {
+        width: 20px;
+      }
+    }
+    .text {
+      ul {
+        width: 700px;
+      }
+      h2 {
+        text-align: center;
+        color: #382cdb;
+        font-weight: 600;
+        font-size: 30px;
+        letter-spacing: 10px;
+        padding-bottom: 50px;
+      }
+      li {
+        font-size: 20px;
+        letter-spacing: 2px;
+        line-height: 50px;
+        padding-left: 30px;
+      }
+      .bad {
+        li {
+          padding-left: 80px;
+        }
+      }
+    }
+  }
+}
+
+#sect4 {
+  background: url(./img/sect4.jpg) no-repeat center / cover;
+  position: relative;
+  .inner{
+    position: absolute;    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1500px;   
+    h1 {
+        font-size: 2.5rem;
+        letter-spacing: 10px;
+        padding-bottom: 100px;
+        img { 
+          width: 20px;
+        }
+      }
+      .top {       
+        margin-bottom: 10%;
+        ul {
+          justify-content: center;
+          display: flex;
+          gap: 150px;
+          li {
+            .color {
+              width: 120px;
+              height: 120px;
+              border-radius: 50%;
+            }
+            &:nth-child(1) .color {
+              background: 3fff;
+              border: 1px solid #000;
+              border-radius: 50%;
+              width: 120px;
+              height: 120px;
+            }
+            &:nth-child(2) .color {
+              background: #0a173c;
+            }
+            &:nth-child(3) .color {
+              background: #000;
+            }
+            p {
+              text-align: center;
+              padding: 20px;
+            }
+          }
+        }
+      }
+    
+      .btm {
+        .title {
+            gap: 100px;
+            
+          p {        
+            font-size: 20px;
+            letter-spacing: 4px;
+            line-height: 50px;
+          }
+        }
+        .font{       
+            letter-spacing: 4px;
+            line-height: 50px;
+            gap: 100px;
+            padding-left: 11%;
+            padding-top: 5%;
+            h2{
+                font-size: 2rem;
+            }
+            p{
+                font-size: 1.5rem;
+            }
+        }
+      }
+  }
+
+}
+
+#sect5{
+    .title{       
+        h1 {
+            font-size: 2.5rem;
+            letter-spacing: 10px;
+            padding-bottom: 100px;            
+            position: relative;
+            margin-bottom: 7%;
+            margin: 5vw;        
+            img { 
+              width: 20px;
+            }
+          }
+          figure{           
+            width: 150px;
+            height: 150px;
+                position: absolute;
+                top: -1vw;
+                left: 8vw;
+            img{
+                width: 100%;
+            }
+          }
+       
+    }
+    .desc{
+        display: flex;
+        justify-content: center;
+        gap: 10%;
+        .left{
+            width: 500px;
+            height: 500px;
+            background: url(./img/sect5_L.png) no-repeat center / contain;
+           
+        }
+        .right{            
+                width: 500px;
+                height: 500px;
+                background: url(./img/sect5_R.png) no-repeat center / contain;
+        }
+        .wrap{           
+            width: 500px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            h2{
+                font-size: 2rem;
+                font-weight: 600;
+                color: #382cdb;
+                padding-bottom: 50px;
+                letter-spacing: 4px;
+            }
+            p{
+                font-size: 1.4rem;
+                letter-spacing: 3px;
+                line-height: 40px;
+            }
+           }
+    }
+}
+
+#sect6{
+    background: url(./img/sect6.jpg) no-repeat center / cover;
+    
+    .inner{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
+
+
+        h1 {
+            font-size: 2.5rem;
+            letter-spacing: 10px;
+            padding-bottom: 100px;
+            padding-left: 10%;
+            img { 
+              width: 20px;
+            }
+          }
+    
+        .top{           
+            .title {
+                gap: 10%;          
+                
+              p {        
+                font-size: 20px;
+                letter-spacing: 4px;
+                line-height: 50px;
+              }
+            }
+            figure{              
+                text-align: center;
+                padding: 30px;
+            }
+        }
+    
+        .btm{           
+            .desc{
+                display: flex;
+                justify-content: center;
+                gap: 10%;               
+                .icon{              
+                    width: 400px;
+                    img{
+                        width: 100%;
+                    }
+                }
+                p {        
+                    font-size: 20px;
+                    letter-spacing: 4px;
+                    line-height: 50px;
+                  }
+            }
+           
+        }
+
+    }
+   
+}
+
+#sect7{
+  background: url(./img/mokup_bg2.jpg) no-repeat center;
+  height: 150vh;
+}

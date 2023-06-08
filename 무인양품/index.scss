@@ -1,0 +1,79 @@
+@import url(/reset.css);
+
+header {  
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
+  padding: 20px;
+  h1 {
+    img {
+      width: 300px;
+    }
+  }
+  .icon {
+    img {
+      padding: 5px;
+    }
+  }
+}
+
+.sectionContainer {
+  .sectionWrap {
+    section {
+      width: 1320px;
+      margin: auto;
+      .inner {
+        display: flex;
+        justify-content: space-between;
+
+        .tabmenu {
+          border: 1px solid #000;
+          width: 200px;
+          padding-top: 60px;
+          li {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 17px;
+            font-weight: bold;
+
+            position: relative;
+            &:hover {
+              color: #7f0117;
+              background-color: rgba(0, 0, 0, 0.2);
+            }
+            &:hover .submenu {
+              display: block;
+            }
+          }
+          .submenu {
+            display: none;
+            position: absolute;
+            left: 200px;
+            top: 0;
+            width: 200px;
+            background-color: #333;
+            color: #fff;
+
+            li {
+              font-weight: 200;
+              font-size: 15px;
+              &:hover {
+                background-color: #7f0117;
+                color: #fff;
+              }
+            }
+          }
+        }
+        .vSlideContainer {
+          width: 580px;
+          
+        }
+        .fadeSlideContainer {
+          width: 460px;
+          
+        }
+      }
+    }
+  }
+}

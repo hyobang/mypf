@@ -1,0 +1,315 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: initial;
+}
+image {
+  vertical-align: top;
+}
+.flex {
+  display: flex;
+}
+li {
+  list-style: none;
+}
+
+body {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url(../image/배경.jpg) no-repeat left top/ cover;
+  /* background-repeat: no-repeat;
+    background-size: cover; 
+    위에거 축약본 */
+}
+/* body::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 255, 0, .1);
+}
+background 배경을 좀 흐리게 해주는것 */
+
+/* ------------------------------------------------------------ */
+
+.wrap {
+  background-color: #000;
+  justify-content: space-between;
+  align-items: center;
+}
+.inner {
+  width: 100%;
+  margin: auto;
+  margin: 0;
+  text-align: center;
+  border: 1px solid #fff;
+}
+nav {
+  width: 70%;
+}
+nav a {
+  display: block;
+}
+nav li {
+  color: #fff;
+}
+
+h1 {
+  width: 100px;
+  margin-left: 20px;
+}
+
+.main {
+  background: #000;
+  font-size: 20px;
+
+}
+.main>li {
+  position: relative;
+  flex: 1;
+}
+
+.main > li > a {
+  /* a태그는 기본 inline 속성이여서 
+    강제로 block속성을 지정해 주지않으면
+    너비값을 설정할수가없다.
+    그래서 block속성을 줌으로써 너비를 지정한다. */
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.submenu {
+    z-index: 999;
+    text-align: center;
+    width: 100%;
+    background: #000;
+    position: absolute;
+    display: none;
+
+  }
+  /* z-index를 써서 컨텐츠 겹치는 높이 지정가능
+  z-index : 999 (최상단), z-index : -999 (최하단) */
+
+.submenu > li > a {
+  color: #fff;
+  
+}
+
+.submenu li {
+  padding: 10px;
+ 
+}
+
+.main li:hover .submenu {
+  display: block;  
+}
+
+.mainmenu:hover >a{
+    color: rgb(104, 255, 117);
+    font-weight: bold;}
+
+.submenu li:hover {background-color: #197c00 }
+
+
+/* --------------------------------------------------------- */
+
+main {
+  position: absolute;
+  left: 10%;
+  top: 20%;
+  z-index: 998;
+}
+
+main video {
+  width: 800px;
+  border: 5px solid #197c00;
+
+}
+
+.btn {
+  text-transform: capitalize;
+  justify-content: center;
+  padding-top: 15px;
+}
+
+.btn li a {
+  display: block;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background: #009c15;
+  color: #fff;
+  font-size: 20px;
+}
+
+.btn li a.on {
+  color: orangered;
+  background-color: orangered;
+}
+
+.mainimg {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  margin-left: 300px;
+}
+
+main video {
+  position: relative;
+}
+
+main .btn {
+  width: 100%;
+  position: absolute;
+}
+
+/* jquery에서 article을 보였다 안보였다 하기 위해
+none 과 block으로 설정해준다. */
+article {
+  display: none;
+}
+
+article.on {
+  display: block;
+  z-index: 1000;
+}
+
+.storywrap {
+  height: 575px;
+  align-items: center;
+  text-align: right;
+  opacity: 0;
+  background: #f3f3f3;
+}
+
+
+.col1 img{height: 575px;
+width: 100%;}
+
+#story {
+  position: relative;
+  /* background: rgba(255,255,255,.3); */
+  width: 1200px;
+  height: 575px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#story span {
+  position: absolute;
+  background: #197c00;
+}
+/* 테두리의 시작점을 지정하기 위해 
+top / bottom / left / right 값을 정한다.
+선의 두께를 주기위해 width / height값을 정한다. 
+이때 가로 세로 방향 주의 할 것
+가로로 누워있는 선인경우 heigth 값을 정하고
+세로로 서있는 선인경우 width 값을 정한다.
+가로선의 경우 width가 0인데 이것은 선이 그려지기 전
+보이지 않게 하기 위해서이다.*/
+span.top {
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 4px;
+}
+span.right {
+  right: 0;
+  top: 0;
+  width: 4px;
+  height: 0;
+}
+span.bottom {
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 4px;
+}
+span.left {
+  left: 0;
+  bottom: 0;
+  width: 4px;
+  height: 0;
+}
+
+a.more {
+  display: block;
+  position: relative;
+  text-indent: 60px;
+  font-style: italic;
+}
+
+a.more:before {
+  position: absolute;
+  left: 0;
+  content: "";
+  width: 50px;
+  height: 1px;
+  border-bottom: 1px solid #000;
+  top: 50%;
+}
+
+a.storyclose{position: absolute;
+right: 0;
+top: -25px;
+background: #fff;
+border: 1px solid #000;
+}
+
+/* ------------------------------------------------ */
+
+#recipe{ 
+/*기존 보더값으로 인해 내용이 사라져도
+선이 남아있었다. 이걸 숨기기위해
+display none 사용 */
+display: none;
+background: #197c00;
+left: 0;
+width: 100%;
+top: 50%;
+transform: translateY(-55%);
+height: 0;
+border: 4px solid #197c00;
+position: absolute;
+}
+#recipe>ul{
+  /* height값을 100%로준 이유는 높이가 존재해야
+  영역이 생기고, 변하는 recipe의
+  높이값을 따라가고, 안에있는 이미지들이 ul의
+  높이에서 벗어나 가려지게 하기위해 */
+  height: 100%;
+  /* 기존 #recipe의 overflow를 옮겨준 이유는
+  닫기버튼의 위치를 박스영역 밖으로 보냈을때
+  사라졌기때문에 하위 ul에 overflow hidden을
+  줌으로써 닫기버튼을 보이게함. */
+  overflow: hidden;
+  align-items: center;
+  
+}
+
+#recipe li>img {
+  width: 100%;
+  height: 300px;
+padding: 10px;
+
+}
+
+#recipe li>p {text-align: center;
+color: #fff;}
+
+.recipeclose{
+  position: absolute;
+  top: -25px;
+  right: 0;
+  display: block;
+}
+/* #recipe img{width: 300px;} */
+#recipe b{display: block;
+color: #333;}

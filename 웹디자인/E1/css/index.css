@@ -1,0 +1,130 @@
+*{  margin: 0;padding: 0;
+    box-sizing: border-box;
+
+}
+li{list-style: none;}
+a{color: initial;
+    text-decoration: none;
+}
+img{
+    vertical-align: top;
+}
+.flex{
+    display: flex;
+}
+
+/* ---------------------------------------------- */
+body{
+    width: 100%;
+    height: calc(100% - 120px);
+   
+}
+
+header{border: 1px solid #000;
+width: 200px;
+height: 100%;}
+
+/* ------------------------------------------- */
+
+main{border: 1px solid #000;
+    width: 400px;
+    height: 100%;
+}
+
+figure img{
+    width: 100px;
+}
+
+
+.gallery2 img{width: 150px;}
+.link img{width: 90px;}
+
+/* ---------------------------------------------- */
+
+.mainmenu{background: #51ca00;     
+    margin-bottom: 5px;
+position: relative;}
+
+.mainmenu a{
+    color: #fff;    
+    display: block;
+    padding: 10px;}
+
+.submenu{
+    position: absolute;
+    display: none;   
+    background: #d3ff34; 
+}
+
+.submenu li{
+}
+
+.spotmenu{
+    margin-top: 30px;
+    padding: 10px;
+    justify-content: space-evenly;    
+}
+
+.spotmenu a{color: #00a732;}
+
+/* ----------------------------------------------- */
+
+.banner{
+    padding: 20px 10px 20px 10px;   
+}
+
+.banner p {font-size: 15px;}
+.banner img{height: 100%;
+margin-right: 10px;}
+
+.notic1,.gallery1{ 
+    display: inline;
+    background: #51ca00
+}
+
+.notic2{
+    padding: 20px 10px 20px 10px;
+    background: #e6ffbd;
+    line-height: 30px;
+}
+
+.notic2 p{
+    display: inline;  
+}
+
+.notic2 span{float: right;}
+
+.gallery2{
+    justify-content: space-evenly;
+    padding: 20px 0 20px 0;
+    background: #e6ffbd;
+}
+
+
+
+
+/* ---------------------------------------------- */
+.slideWrap{
+    border: 1px solid #000;
+    width: calc(100% - 400px);
+    height: calc(100vh - 120px);
+    position: relative;
+}
+
+
+.slide{
+    position: absolute;
+}
+
+.slide img{
+    width: 100%;
+}
+
+
+
+/*------------------------------------------------  */
+
+footer{border: 1px solid #000;
+width: 100%;
+height: 120px;
+}

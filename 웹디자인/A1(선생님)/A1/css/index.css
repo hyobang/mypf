@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+.flex {
+  display: flex;
+}
+.container > * {
+  border: 1px solid #00f;
+}
+/* ---------------------- */
+.container {
+  width: 1200px;
+  margin: auto;
+}
+header {
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+nav {
+  width: 55%;
+  border: 1px solid #000;
+}
+/* -------------------------------- */
+nav a {
+  display: block;
+} /*1*/
+.mainmenu {
+  flex: 1; /*2*/
+  text-align: center;
+  position: relative; /*3*/
+}
+
+
+li.mainmenu > a {
+  padding: 10px;
+}
+li.mainmenu:hover > a {
+  background: #000;
+  color: #fff;
+}
+/* -------------------------------- */
+.submenu {
+  position: absolute; 
+  background: #ffd;
+  display: none;  
+ width: 100%; 
+  z-index: 999;
+}
+.submenu li a {
+  padding: 5px;
+} /*8*/
+.submenu li:hover a {
+  background-color: #ccc;
+}
+/* ---------------------- */
+.slideWrap {
+  height: 300px;
+}
+.slideContainer {
+  height: 100%;
+  overflow: hidden;/*1.슬라이드의 오른편 영역/아래 영역 보이지 않게*/
+}
+.slide {
+  position: relative;/*2-2.슬라이드에 대한 설명 부분이 부모 영역을 지정*/
+}
+.slide.on {
+  display: block;/*3.활성화된 슬라이드 이미지 지정*/
+}
+h4.destext {
+  position: absolute;/*2-1. 부보의 영역 기준으로 화면 배치*/
+  left: 50%;
+  top: 50%;
+  background: #000;
+  color: #fff;
+  padding: 10px 20px;
+  transform: translate(-50%, -50%);/*4.부모의 기준의 중앙정렬*/
+}
+/* ---------------------- */
+.contents {
+  height: 200px;
+}
+.banner,.link{position: relative;}
+.contents>*{flex: 1;}
+.tabcontents{border: 1px solid #f00;
+position: relative;
+height: 158px;/* 5.자식이 absolute 인 경우 높이가 만들어지지 않기때문에 */
+
+}
+.notic{background: #ffd;}
+.tab{position: absolute;
+width:100%/*6.box를 absolute 하면 width 값이 text,img 너비만큼만 만들어진다*/;
+display: none;/*7. 컨덴츠가 absolute 인경우 맨 마지막 데이타만 보인다*/
+}
+.tab.on{display: block;}/*자식을 모두 안보이게 해서 지정한 자료만 보여주세요*/
+.tabmenu li a{display: block;
+padding: 10px 20px;
+background: #ddd;
+}
+.tabmenu li.on a {background: tomato;color:#fff}
+.gallery ul{justify-content: space-between;background: #ddd;}
+/* ---------------------- */
+footer {
+  height: 100px;
+}

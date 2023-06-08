@@ -1,0 +1,405 @@
+@import url(./reset.css);
+@font-face {
+  font-family: Montserrat;
+  src: url(./font/Montserrat-Regular.woff);
+}
+@font-face {
+  font-family: Montserrat-EL;
+  src: url(./font/Montserrat-ExtraLight.woff);
+}
+@font-face {
+  font-family: Montserrat-bold;
+  src: url(./font/Montserrat-Bold.woff);
+}
+@font-face {
+  font-family: NotoSans;
+  src: url(./font/NotoSans-Regular.woff);
+}
+@font-face {
+  font-family: Notomedium;
+  src: url(./font/NotoSans-Medium.woff);
+}
+@font-face {
+  font-family: NotoSans-thin;
+  src: url(./font/NotoSans-Thin.woff);
+}
+@font-face {
+  font-family: NotoSans-light;
+  src: url(./font/NotoSans-Light.woff);
+}
+/*-----------------------------------------------------------*/
+img {
+  vertical-align: top;
+}
+
+.flex {
+  display: flex;
+}
+
+/*-----------------------------------------------------------*/
+body {
+  width: 1920px;
+}
+
+#sect1 {
+  width: 1920px;
+  height: 1500px;
+  margin: auto;
+}
+#sect1 header {
+  width: 100%;
+  height: 100px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#sect1 header h1 {
+  padding-left: 30px;
+}
+#sect1 header .menu {
+  gap: 40px;
+}
+#sect1 header .gnb {
+  gap: 40px;
+  padding-right: 30px;
+}
+#sect1 .mainCon {
+  color: #fff;
+  text-align: center;
+  top: 10%;
+  left: 50%;
+  transform: translate(0%, 10%);
+}
+#sect1 .mainCon h2 {
+  font-size: 230px;
+  font-family: Montserrat-bold;
+  font-weight: bold;
+}
+#sect1 .mainCon p {
+  font-size: 24px;
+  font-family: NotoSans-light;
+  margin-top: 10px;
+}
+#sect1 .bgdiv {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+#sect1 .bgdiv video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+}
+#sect1 .bgdiv .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(39, 145, 115, 0.9);
+}
+#sect1 .articleContainer {
+  margin: auto;
+  position: relative;
+  width: 1024px;
+  height: 470px;
+  background: #fff;
+  margin: auto;
+  top: 5%;
+  z-index: 10;
+}
+#sect1 .articleContainer article {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+}
+#sect1 .articleContainer article.on {
+  opacity: 1;
+}
+#sect1 .articleContainer article figure {
+  position: absolute;
+  right: 0;
+  top: -65px;
+  transform: translateX(30%);
+  width: 520px;
+  height: 536px;
+}
+#sect1 .articleContainer article figure span {
+  position: absolute;
+  display: inline-block;
+  transform: translateY(100px);
+  opacity: 0;
+}
+#sect1 .articleContainer article figure span:nth-child(1) {
+  transition: 1s 0.5s;
+}
+#sect1 .articleContainer article figure span:nth-child(2) {
+  transition: 1s 0.8s;
+}
+#sect1 .articleContainer article .desc {
+  position: relative;
+  width: 904px;
+  height: 350px;
+  float: left;
+  margin: 60px;
+}
+#sect1 .articleContainer article .desc .summary {
+  transform: translateY(100px);
+  transition: 0.7s;
+  opacity: 0;
+}
+#sect1 .articleContainer article .desc .summary em {
+  font-size: 50px;
+  letter-spacing: -5px;
+  font-family: NotoSans-thin;
+}
+#sect1 .articleContainer article .desc .summary h3 {
+  margin-top: 20px;
+  font-size: 80px;
+  letter-spacing: -5px;
+  font-family: NotoSans-thin;
+}
+#sect1 .articleContainer article .desc .summary .detail {
+  font-size: 18px;
+  margin-top: 30px;
+  line-height: 30px;
+  font-family: NotoSans-light;
+}
+#sect1 .articleContainer article .desc .btn {
+  opacity: 0;
+  transition: 1s 0.5s;
+  display: flex;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0;
+}
+#sect1 .articleContainer article .desc .btn li {
+  border-radius: 50px;
+  background: #149f5c;
+  width: 150px;
+  text-align: center;
+  padding: 20px;
+  margin-right: 10px;
+}
+#sect1 .articleContainer article .desc .btn a {
+  color: #fff;
+  font-family: NotoSans;
+}
+#sect1 .articleContainer article.on .summary {
+  transform: translateY(0px);
+  opacity: 1;
+}
+#sect1 .articleContainer article.on .btn {
+  opacity: 1;
+}
+#sect1 .articleContainer article.on span {
+  transform: translateY(0px);
+  opacity: 1;
+}
+#sect1 .Area {
+  position: absolute;
+  border-top: 1px solid rgba(255, 255, 255, 0.7);
+  width: 100%;
+  height: 126px;
+  bottom: 0;
+  z-index: 99;
+}
+#sect1 .Area span.dot {
+  position: absolute;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 100%;
+  top: -5px;
+  left: 0px;
+}
+#sect1 .Area ul {
+  width: 1024px;
+  margin: auto;
+  justify-content: space-between;
+}
+#sect1 .Area li {
+  display: inline-block;
+  height: 70px;
+  line-height: 70px;
+}
+#sect1 .Area .tabmenu li {
+  line-height: 76px;
+}
+#sect1 .Area .tabmenu li.on a {
+  font-family: Notomedium;
+  color: #fff;
+}
+#sect1 .Area .tabmenu li a {
+  font-size: 20px;
+  font-family: NotoSans-light;
+  color: rgba(255, 255, 255, 0.7);
+}
+#sect1 .Area .brand {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+#sect1 .Area .brand a {
+  background: #fff;
+  padding: 15px;
+  border-radius: 50px;
+  font-family: NotoSans;
+}
+
+#sect2 {
+  width: 100%;
+  background: #fff;
+  position: relative;
+  height: 200vh;
+}
+#sect2 .product-header {
+  position: absolute;
+  top: -240px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1184px;
+  margin: auto;
+}
+#sect2 .product-header h1 {
+  margin: 30px 0;
+  font-family: "NotoSans";
+  font-size: 50px;
+  line-height: 80px;
+  text-align: center;
+  color: #fff;
+}
+#sect2 .product-header ul.item {
+  background: #fff;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+}
+#sect2 .product-header ul.item a {
+  position: relative;
+  display: block;
+  padding: 10px;
+}
+#sect2 .product-header ul.item a.on {
+  font-family: "NotoSans";
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.35s;
+}
+#sect2 .product-header ul.item a.on::after {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #149f5c;
+  bottom: 0;
+  transition: 0.35s;
+}
+#sect2 ul.desc {
+  width: 1184px;
+  height: 600px;
+  margin: auto;
+  text-align: center;
+}
+#sect2 ul.desc li {
+  display: none;
+}
+#sect2 ul.desc li.on {
+  display: block;
+}
+#sect2 ul.desc li h3 {
+  font-family: "NotoSans-thin";
+  font-size: 50px;
+  padding-top: 120px;
+  line-height: 70px;
+}
+#sect2 ul.desc li h3 b {
+  font-weight: bold;
+}
+#sect2 ul.desc li p {
+  font-size: 17px;
+  line-height: 32px;
+  color: #555;
+  margin-top: 30px;
+}
+#sect2 ul.desc li a {
+  margin: 65px auto 0;
+  display: block;
+  width: 300px;
+  height: 60px;
+  line-height: 58px;
+  text-align: center;
+  font-family: "NotoSans";
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+  border-radius: 50px;
+  border: 1px solid #797979;
+}
+#sect2 .productItem {
+  max-width: 1184px;
+  margin: auto;
+}
+#sect2 .productItem::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#sect2 .productItem article {
+  float: left;
+  position: relative;
+}
+#sect2 .productItem article:hover {
+  z-index: 999;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 54px 55px, rgba(0, 0, 0, 0.3) 0px -12px 30px, rgba(0, 0, 0, 0.3) 0px 4px 6px, rgba(0, 0, 0, 0.3) 0px 12px 13px, rgba(0, 0, 0, 0.3) 0px -3px 5px;
+}
+#sect2 .productItem article img {
+  vertical-align: top;
+}
+#sect2 .productItem article h2 {
+  font-size: 15px;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 1rem;
+  color: #fff;
+}
+
+footer {
+  width: 100%;
+  height: 300px;
+  background: #fff;
+  border-top: 1px solid #333;
+  text-align: center;
+}
+footer .inner {
+  padding-top: 50px;
+}
+footer .inner .row1 {
+  padding-bottom: 20px;
+}
+footer .inner .row2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+footer .inner .row2 .row2a, footer .inner .row2 .row2b, footer .inner .row2 .row2c {
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+  gap: 20px;
+}/*# sourceMappingURL=index.css.map */

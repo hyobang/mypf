@@ -1,0 +1,54 @@
+*{margin: 0;padding: 0;
+box-sizing: border-box;}
+
+li{list-style: none;}
+
+a{color: initial;
+text-decoration: none;}
+
+.flex{display: flex;}
+
+/* ----------------------------------------- */
+
+body{ margin: auto;}
+main{width: 1200px;margin: auto;}
+.inner{width: 1200px;margin: auto;}
+
+header{background: rgb(130, 226, 255);
+height: 100px;}
+h1 img{width: 200px;padding-top: 10px;}
+header>.inner{justify-content: space-between;
+    height: 100px;
+align-items: center;}
+
+nav{width: 55%;}
+nav>ul{display: flex;justify-content: space-between;text-align: center;}
+
+
+.mainmenu{position: relative;width: 25%;background: rgb(255, 255, 255);}
+.mainmenu a{padding: 10px;display: block;}
+.submenu{position: absolute;width: 100%;background: rgb(150, 150, 150);
+display: none;}
+.mainmenu:hover{background: rgb(93, 123, 255);}
+.mainmenu:hover>a{color: white;}
+.submenu li:hover{background: rgb(225, 255, 91);}
+
+/* ------------------------------------------------------------------- */
+
+.slide{height: 200px;
+overflow: hidden;}
+.notic{border: 1px solid #000;
+height: 200px;}
+.notic a{display: flex;justify-content: space-between;}
+.notic2{margin: 15px 5px; }
+
+/* ------------------------------------------------------------ */
+
+footer{background: rgb(130, 226, 255);
+height: 100px;width: 1200;}
+.ftlogo img{width: 200px;padding-top: 10px;}
+.hdmenu{width: 60%; padding-top: 20px; padding-left: 20px;}
+.hdmenu p{text-align: center; padding: 10px;}
+
+.hadan{justify-content: space-between;}
+footer>.inner{justify-content: space-evenly;}

@@ -1,0 +1,156 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+
+
+body {
+    margin: 0;
+    --color-text: #111;  
+    --color-bg: #fff;
+    --color-link: #1352d1;
+    --color-link-hover: #111;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    font-family: europa, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Page Loader */
+
+
+
+
+
+a {
+    text-decoration: none;
+    color: var(--color-link);
+    outline: none;
+}
+
+a:hover {
+    color: var(--color-link-hover);
+    outline: none;
+}
+
+
+
+ 
+
+.content__item {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    counter-increment: itemcounter;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    line-height: 30px;
+}
+
+
+.link {
+    cursor: pointer; 
+    position: relative;
+    white-space: nowrap;
+    color: var(--color-text);
+}
+
+.link::before,
+.link::after {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    top: 100%;
+    left: 0;
+    pointer-events: none;
+}
+
+.link::before {
+    content: '';
+    /* show by default */
+}
+
+
+.link__graphic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    fill: none;
+    stroke: rgb(133, 151, 255);
+    stroke-width: 3px;
+}
+
+
+.link__graphic--stroke path {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+}
+
+.link:hover .link__graphic--stroke path {
+    stroke-dashoffset: 0;
+}
+.link.on .link__graphic--stroke path {
+    stroke-dashoffset: 0;
+}
+
+
+
+.link__graphic--arc {
+	top: 73%;
+	left: -23%;
+}
+
+.link__graphic--arc path {
+    transition: stroke-dashoffset 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.link:hover .link__graphic--arc path {
+    transition-timing-function: cubic-bezier(0.8, 1, 0.7, 1);
+    transition-duration: 0.3s;
+}
+.link.on .link__graphic--arc path {
+    transition-timing-function: cubic-bezier(0.8, 1, 0.7, 1);
+}
+.link--carme {   
+    font-size: 1.5rem;
+    font-family: Cute;
+}
+.link--carme:hover {   
+    color: rgb(133, 151, 255); 
+}
+.link--carme.on{   
+    color: rgb(133, 151, 255); 
+}
+
+.link--carme::before {
+    display: none;
+}
+ 
+
+.link__graphic--scribble {
+    top: 100%;    
+    height: 20px;
+}
+
+.link__graphic--scribble path {
+    transition: stroke-dashoffset 0.6s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.link:hover .link__graphic--scribble path {
+    transition-timing-function: cubic-bezier(0.8, 1, 0.7, 1);
+    transition-duration: .5s;
+    
+}
+.link.on .link__graphic--scribble path {
+    transition-timing-function: cubic-bezier(0.8, 1, 0.7, 1);
+
+}

@@ -1,0 +1,348 @@
+@charset "UTF-8";
+@import url(./reset.css);
+@font-face {
+  font-family: sans-serif;
+  src: url(./font/SANSSERIFCOLLECTION.TTF);
+}
+@keyframes bannerflow {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+#body::-webkit-scrollbar {
+  width: 10px; /*스크롤바의 너비*/
+}
+
+#body::-webkit-scrollbar-thumb {
+  background-color: #0f2056; /*스크롤바의 색상*/
+}
+
+#body::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.774); /*스크롤바 트랙 색상*/
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.flex {
+  display: flex;
+}
+
+a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#noticeBanner {
+  height: 40px;
+  background: #0f2056;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  font-size: 12px;
+}
+#noticeBanner ul {
+  width: 300%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  animation: bannerflow;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+#noticeBanner ul li {
+  width: 300px;
+  height: 100%;
+  line-height: 40px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 999;
+}
+header h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  margin: 0 auto;
+  height: 28px;
+  background-image: url(./images/headerlogo.png);
+  background-repeat: no-repeat;
+}
+header nav {
+  margin: 0 auto;
+  width: min(100%, 1200px);
+  height: 28px;
+}
+header nav #mainMenu {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  justify-content: space-between;
+}
+header nav #mainMenu li {
+  width: 150px;
+}
+header nav #mainMenu li a {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+header nav #mainMenu #shop {
+  background-image: url(./images/headershop.png);
+}
+header nav #mainMenu #board {
+  width: 100px;
+  background-image: url(./images/board.png);
+}
+header nav .tabMenu {
+  background-color: #f6f7f8;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 15px;
+  padding: 100px 0 0 0;
+  position: absolute;
+  top: 0;
+  width: 300px;
+  height: 100vh;
+  text-align: center;
+}
+header nav .tabMenu .closeBtn {
+  font-size: 40px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #0f2056;
+}
+header nav .tabMenu .down {
+  display: inline-block;
+  padding: 0 10px;
+}
+header nav .tabMenu .slideMenu {
+  position: relative;
+  overflow: hidden;
+}
+header nav .tabMenu .slideMenu .subMenu {
+  position: absolute;
+  top: 40px;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+header nav .tabMenu .slideMenu .subMenu li {
+  height: 30px;
+}
+header nav #boardMenu {
+  right: -100%;
+}
+header nav #boardMenu .closeBtn {
+  left: 20px;
+}
+header nav #shopMenu {
+  left: -100%;
+}
+
+#bannerSect {
+  max-width: 1600px;
+  margin: 0 auto;
+  height: 50vh;
+}
+#bannerSect article {
+  position: relative;
+  height: 100%;
+  margin-top: 100px;
+}
+#bannerSect article .slideDesc {
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#bannerSect article .slideDesc h2 {
+  color: #fff;
+  font-weight: 600;
+  font-size: 30px;
+  letter-spacing: 10px;
+}
+#bannerSect article .slideDesc a {
+  display: inline-block;
+  width: 90px;
+  height: 20px;
+  margin-top: 30px;
+  font-size: 13px;
+  color: #fff;
+  padding: 8.5px 35px 10.5px;
+  background: rgba(153, 153, 153, 0.6156862745);
+  border-radius: 24px;
+}
+#bannerSect article .slideDesc a:hover {
+  background: rgba(0, 0, 0, 0.7176470588);
+  transition: 0.5s;
+}
+
+#itemSect {
+  margin-top: 100px !important;
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#itemSect article {
+  height: 100%;
+}
+#itemSect article #itemList {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+#itemSect article #itemList li {
+  width: 250px;
+  height: 400px;
+}
+#itemSect article #itemList li img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+#itemSect article #itemList li .addColor {
+  font-size: 14px;
+  font-weight: 600;
+}
+#itemSect article #itemList li .afterPick {
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 20px;
+}
+#itemSect article #itemList li .itemDesc {
+  font-size: 12px;
+  font-weight: 600;
+}
+#itemSect article #itemList li .text {
+  justify-content: space-between;
+  font-size: 12px;
+  line-height: 20px;
+}
+#itemSect article #itemList li .text i {
+  font-style: normal;
+  text-decoration: line-through;
+  padding-right: 7px;
+}
+
+footer {
+  margin-top: 200px !important;
+  padding: 30px;
+  height: 30vh;
+}
+footer .footerWrap {
+  border: 1px solid #d6d6d6;
+  padding: 30px;
+  justify-content: space-between;
+}
+footer .footerWrap #info {
+  line-height: 20px;
+}
+footer .footerWrap #info #insta {
+  width: 40px;
+  height: 40px;
+  font-size: 35px;
+  opacity: 0.4;
+  transition: 0.3s;
+  padding-bottom: 20px;
+}
+footer .footerWrap #info #insta:hover {
+  opacity: 1;
+  transition: 0.3s;
+}
+footer .footerWrap #info p {
+  font-size: 14px;
+  line-height: 25px;
+  letter-spacing: 5px;
+}
+footer .footerWrap #customerService {
+  padding-bottom: 40px;
+  line-height: 25px;
+  letter-spacing: 3px;
+}
+footer .footerWrap #customerService h4 {
+  font-size: 13px;
+}
+footer .footerWrap #customerService p {
+  margin-top: 5px;
+  font-size: 22px;
+  font-weight: 600;
+}
+footer .footerWrap #customerService span {
+  display: inline-block;
+  line-height: 15px;
+  font-size: 12px;
+  color: #737171;
+  margin-top: 10px;
+  padding-bottom: 40px;
+}
+footer .footerWrap #customerService address {
+  font-size: 13px;
+}
+footer .footerWrap #customerService .account h4 {
+  padding-right: 30px;
+}
+footer .footerWrap #customerService .account li {
+  font-size: 13px;
+}
+
+@media screen and (max-width: 768px) {
+  header nav #mainMenu li {
+    margin-right: 50px;
+    width: 50px;
+  }
+  header nav #mainMenu li #board {
+    width: 100%;
+  }
+  footer .footerWrap {
+    flex-direction: column;
+    gap: 50px;
+  }
+  footer .footerWrap #info p {
+    font-size: 10px;
+  }
+  footer .footerWrap #customerService span {
+    font-size: 10px;
+  }
+  footer .footerWrap #customerService address {
+    font-size: 10px;
+  }
+  footer .footerWrap #customerService .account h4, footer .footerWrap #customerService .account li {
+    font-size: 10px;
+  }
+}/*# sourceMappingURL=index.css.map */

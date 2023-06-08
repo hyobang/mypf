@@ -1,0 +1,87 @@
+@import url(/reset.css);
+img {
+  vertical-align: top;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #eeeeee;
+  background-image: url(./images/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  position: relative;
+}
+
+.dim {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+header {
+  position: fixed;
+  width: 160px;
+  background: #eeeeee;
+  height: 100vh;
+  z-index: 11;
+}
+
+h1 {
+  padding: 20px;
+}
+h1 img {
+  width: 100%;
+}
+
+.mainmenu {
+  padding: 30px 10px;
+}
+.mainmenu li {
+  padding: 10px;
+  text-align: right;
+}
+
+section {
+  display: flex;
+  position: absolute;
+  left: 160px;
+  z-index: 10;
+}
+section article {
+  width: 380px;
+  background: #fff;
+  height: 100vh;
+}
+
+a.btn, a.next, a.prev {
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  background: rgba(0, 0, 0, 0.4);
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.25s;
+  z-index: 11;
+}
+a.btn:hover, a.next:hover, a.prev:hover {
+  background: rgba(196, 196, 196, 0.6);
+}
+
+a.prev {
+  right: 71px;
+  display: none;
+}
+
+a.next {
+  right: 0;
+}
+
+a.on {
+  display: block;
+}/*# sourceMappingURL=index.css.map */

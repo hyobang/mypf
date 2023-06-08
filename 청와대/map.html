@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .introduce{
+            max-width: 1336px; height: 665px;
+            padding-top: 35%;
+            background-image: url(./images/map_cwd.png);
+            background-size: cover;
+            margin: auto;
+            position: relative;
+            border: 1px solid #000;
+        }
+
+        .map{
+            position: absolute;            
+            font-weight: bold;
+            color: #fff;}
+        span{
+            display: inline-block;
+            width: 37px;
+            height: 37px;
+            background: #E23e58;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 37px;
+            position: relative;
+            z-index: 10;
+        }
+        .map p{
+            display: inline-block;
+            line-height: 31px;
+            height: 31px;
+            padding: 0 10px 0 20px;
+            background: #000;            
+            border: 3px solid #E23e58;
+            position: relative;
+            left: -20px;
+            border-radius: 0 20px 20px 0;}
+
+        .map:hover p{
+            padding: 0 10px 0 10px;
+            width: auto;
+            border: 3px solid #E23e58;
+        }
+            
+
+
+        .fir{
+           top: 0px;
+           transform: translateX(604%);
+        }
+
+        .sec{
+            top: 0;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="introduce">
+        <div class="map fir">
+            <span>1</span>
+            <p class="place">청와대 본관</p>
+        </div>
+        <div class="map sec">
+            <span>2</span>
+            <p class="place">칠궁</p>
+        </div>
+        <div class="map thi">
+            <span>3</span>
+            <p class="place">영빈관</p>
+        </div>
+        <div class="map fou">
+            <span>4</span>
+            <p class="place">대통령 관저</p>
+        </div>
+    </div>
+</body>
+</html>

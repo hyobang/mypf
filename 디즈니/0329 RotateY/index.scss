@@ -1,0 +1,384 @@
+@import url(/reset.css);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  vertical-align: top;
+}
+.flex {
+  display: flex;
+}
+body {
+  background-color: rgb(41, 22, 53);
+  &.on0 {
+    background: #000;
+  }
+  &.on1 {
+    background: #000;
+  }
+  &.on2 {
+    background: #000;
+  }
+}
+// key frame
+@keyframes btnAni {
+  0% {
+    transform: scale(1);
+    color: #f0f;
+  }
+  100% {
+    transform: scale(1.5);
+    color: #ff0;
+  }
+}
+@keyframes bounce {
+    //애니메이션 bounce 통통튀는 높이조절
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-20px);
+    }
+  }
+// ------------------------
+#wrap {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  perspective: 900px;
+
+  #grid {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(8, 1fr);
+    transform-origin: right center;
+    transition: 0.35s;
+    &.on {
+      transform: rotateY(-8deg);
+    }
+    .grid {
+    //   border: 1px solid #ff0000;
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      perspective: 900px; /* 자식 요소들을 3d로 변경하기 위해 부모에 지정 */
+      opacity: 0;
+      //nav안에있는 메뉴를 클릭했을 때.
+      //.gird안에있는 div들이 180도 회전을한다.
+      & > div{
+        transform: rotateY(180deg);
+      }
+      & > div.on {
+        transition: 1s;
+        //180도가 돌아가지만 뒤집혀서보인다.
+        //그래서 기존에 안보일떄 180도를주고
+        //보이게되면 0도로 바꿔서 안뒤집히게해준다.
+        transform: rotateY(0deg);
+      }
+      &.on {
+        opacity: 1;
+      }
+
+      &#grid1 {
+        display: grid;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: repeat(8, 1fr);
+        & > div {
+        //   border: 1px solid #4400ff;
+        }
+        & > div:nth-child(1) {
+          grid-column: 1/5; /* 가로 (열) */
+          grid-row: 1/4; /* 세로 (행) */
+          video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        & > div:nth-child(2) {
+          grid-column: 5/7;
+          grid-row: 1/4;
+          background-image: url(./images/알라딘/1.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+        & > div:nth-child(3) {
+          grid-column: 7/-1;
+          grid-row: 1/5;
+          background-image: url(./images/알라딘/2.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+        & > div:nth-child(4) {
+          grid-column: 1/3;
+          grid-row: 4/8;
+          background-image: url(./images/알라딘/3.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+        & > div:nth-child(5) {
+          grid-column: 3/5;
+          grid-row: 4/5;
+        }
+        & > div:nth-child(6) {
+          grid-column: 3/5;
+          grid-row: 5/8;
+          background-image: url(./images/알라딘/4.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+        & > div:nth-child(7) {
+          grid-column: 5/7;
+          grid-row: 4/8;
+          video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        & > div:nth-child(8) {
+          grid-column: 7/-1;
+          grid-row: 5/8;
+          background-image: url(./images/알라딘/5.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+
+      &#grid2 {
+        display: grid;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: repeat(8, 1fr);
+        & > div {
+            // border: 1px solid #ae00ff;
+        }
+        & > div:nth-child(1) {
+          grid-column: 1/3;
+          grid-row: 1/4;
+          background-image: url(./images/인어공주/1.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+        & > div:nth-child(2) {
+          grid-column: 3/7;
+          grid-row: 1/4;
+          video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        & > div:nth-child(3) {
+          grid-column: 7/-1;
+          grid-row: 1/5;
+          background-image: url(./images/인어공주/2.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+        & > div:nth-child(4) {
+          grid-column: 1/3;
+          grid-row: 4/8;
+          background-image: url(./images/인어공주/3.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+        & > div:nth-child(5) {
+          grid-column: 3/7;
+          grid-row: 4/5;
+        }
+        & > div:nth-child(6) {
+          grid-column: 3/5;
+          grid-row: 5/8;
+          background-image: url(./images/인어공주/4.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+        & > div:nth-child(7) {
+          grid-column: 5/7;
+          grid-row: 5/8;
+          background-image: url(./images/인어공주/5.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+        & > div:nth-child(8) {
+          grid-column: 7/-1;
+          grid-row: 5/8;
+          background-image: url(./images/인어공주/6.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+
+      &#grid3 {
+        display: grid;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: repeat(8, 1fr);
+        & > div {
+        //   border: 1px solid #ae00ff;
+        }
+        & > div:nth-child(1) {
+          grid-column: 1/3;
+          grid-row: 1/5;
+          background-image: url(./images/백설공주/1.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+        & > div:nth-child(2) {
+          grid-column: 3/4;
+          grid-row: 1/3;
+        }
+        & > div:nth-child(3) {
+          grid-column: 4/6;
+          grid-row: 1/3;
+          background-image: url(./images/백설공주/2.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+        & > div:nth-child(4) {
+          grid-column: 6/-1;
+          grid-row: 1/4;
+          video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        & > div:nth-child(5) {
+          grid-column: 3/6;
+          grid-row: 3/5;
+          video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        & > div:nth-child(6) {
+          grid-column: 1/3;
+          grid-row: 5/8;
+          background-image: url(./images/백설공주/3.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+        & > div:nth-child(7) {
+          grid-column: 3/6;
+          grid-row: 5/8;
+          background-image: url(./images/백설공주/4.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+        & > div:nth-child(8) {
+          grid-column: 6/-1;
+          grid-row: 4/8;
+          background-image: url(./images/백설공주/5.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+        //백설공주의 위치를 변경하려면 아래값수정
+        figure{
+            // bottom: 0%;
+            // right: 0%;
+        }
+      }
+      figure{
+        //애니메이션 위치 조절
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        // 각각 그리드 안에 figure의 위치를 수정하려면
+        //아래 top left값을 제거하고 각 grid에 추가
+        top: 30%;
+        left: 35%;
+        animation:
+        //애니메이션 속도 조절
+        bounce 0.3s
+        alternate infinite
+        cubic-bezier(.2, .65, .6, 1);
+        img{
+            width: 100%;
+            height: 100%;
+        }
+      }
+    }
+  }
+}
+
+.btnMenu {
+  position: fixed;
+  left: 20px;
+  top: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  animation: btnAni 1s infinite linear alternate;
+  z-index: 999;
+  i {
+    z-index: 999;
+    // opacity가아닌 visibility로 쓰는이유는
+    //
+    visibility: hidden;
+    position: absolute;
+    &.on {
+      // 클래스에 on이 붙으면 보인다.
+      // 처음화면에 보일것은 햄버거다.
+      // 강제로 HTML에서 on을 붙여준다.
+      visibility: visible;
+    }
+  }
+}
+
+nav {
+  position: fixed;
+  width: 150px;
+  height: 100%;
+  z-index: 99;
+  background: #9b30ff;
+  left: 0;
+  top: 0;
+  transform-origin: left center;
+  transform: rotateY(-50deg);
+  transition: 0.35s;
+  opacity: 0;
+  &.on {
+    transform: rotateY(15deg);
+    opacity: 1;
+  }
+
+  ul {
+    position: absolute;
+    top: 300px;
+    width: 100%;
+    li {
+      padding: 20px;
+      text-align: center;
+    }
+    a {
+      color: #fff;
+      font-size: 18px;
+    }
+  }
+}

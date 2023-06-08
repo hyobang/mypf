@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #fff;
+  color: #333;
+}
+a {
+  text-decoration: none;
+  color: initial;
+}
+li {
+  list-style: none;
+}
+
+/* 이미지는 인라인 엘리먼트기 때문에 이미지가 영역사이에 갭이 존재하여
+갭을 없애기 위해 지정한 명령 */
+img {
+  vertical-align: top;
+}
+.flex {
+  display: flex;
+}
+
+/* 슬라이드 제목 구현 */
+h2 {
+  font-size: 20px;
+  background: #000;
+  padding: 10px 20px;
+  color: #fff;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 5%;
+}
+
+/* 탭,갤러리 제목 */
+h3 {
+  font-size: 18px;
+}
+
+/* ------------------슬라이드---------------------------- */
+
+.slideWrap {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+/* 자식이 absolute 이기 때문에 너비/높이를 인식하지 못하기 때문에
+  부모에 width/height 을 지정해줘야 한다. */
+
+.slide {
+  width: 100%; /* 페이드 슬라이드 구현 */
+  position: absolute;
+}
+.slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover; /* 이미지 영역의 width가 고정이 아니기 때문에 지정해준 명령 */
+}
+
+/* ----------------------------------------------- */
+
+.container {
+  position: relative;
+}
+header {
+  width: 200px;
+}
+
+main {
+  width: calc(100% - 200px); /* width값 계산해줌 */
+  background: #eee;
+}
+/* 콘텐츠 영역 안에있는 바로가기가 슬라이드 영역 위에 위치하기 때문에
+부모인 relative를 지정해주기 위한 영역 */
+
+/* -----------------메뉴--------------------------- */
+
+nav {
+  width: 84%;
+  margin: auto;
+  border: 1px solid #000;
+}
+
+nav a {
+  display: block;
+  padding: 10px;
+}
+li.mainmenu:hover > a {
+  background: green;
+  color: #fff;
+}
+.submenu a {
+  padding: 5px;
+}
+
+/* 서브 메뉴 백그라운드 */
+.submenu {
+  display: none;
+}
+
+.menubg {
+  position: absolute;
+  width: calc(100% - 180px);
+  height: 166px;
+  background: rgba(0, 153, 70, 0.5);
+  top: 130px;
+  left: 183px;
+  display: none;
+}
+
+li.mainmenu {
+  position: relative;
+  z-index: 99;
+}
+
+li.mainmenu:not(:last-child){border-bottom: 1px solid #000;}
+/* li 요소들 중에 마지막 요소만 제외하고 (NOT 연산자) */
+
+/* 서브메뉴 위치 설정 */
+.submenu {
+  position: absolute;
+  left: 200px;
+  top: 0;
+  width: 500px;
+}
+.submenu li {
+  float: left;
+}
+
+.submenu a {
+  color: #fff;
+}
+.submenu li:hover a {
+  background: yellowgreen;
+}
+
+/* ------------------------------------------------ */
+
+.banner{
+    width: 100%;
+    height: 200px;
+    background: #ffefcb;;
+    align-items: center;
+}
+
+figure{background-image: url(../images/banner.jpg);
+width: 300px;
+height: 200px;}
+
+.text{  
+    padding-left: 70px;   
+    line-height: 30px;
+    align-items: center;
+}
+
+.text h3{color: #308830;
+font-size: 30px;
+margin-bottom: 15px;}
+
+.text p{color: #838383;}
+
+/* ------------------------------------------ */
+
+.link img{ padding: 15px;
+    background: #798f2a;
+
+}
+.link{      
+    position: absolute;
+    top: 0;
+    right: 0;}
+
+
+
+/* ------------------------------------------- */
+
+.col{
+    align-items: center;
+    border: 1px solid #000;}

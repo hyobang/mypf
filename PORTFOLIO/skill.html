@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>skillBar</title>
+    <style>
+      #skillBar {
+        width: 80%;
+        margin: 100px auto;
+        background-color: #ddd;
+        margin-bottom: 1rem;
+      }
+
+      .Bar {
+        width: 100%;
+        position: relative;
+        background: #ddd;
+        height: 40px;
+        margin-bottom: 1rem;
+      }
+
+      .Bar span {
+        position: absolute;
+        right: 10px;
+        top: 7%;
+      }
+
+      .rate {
+        width: 0%;
+        height: 100%;
+        background: hotpink;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="skillBar">
+      <div class="Bar" data-rate="90">
+        <div id="html" class="rate">html</div>
+        <span>0%</span>
+      </div>
+      <div class="Bar" data-rate="70">
+        <div id="js" class="rate">jquery</div>
+        <span>0%</span>
+      </div>
+      <div class="Bar" data-rate="80">
+        <div id="html" class="rate">graphics</div>
+        <span>0%</span>
+      </div>
+    </div>
+
+    <script>
+      const bar = document.querySelectorAll(".Bar");
+
+      bar.forEach((item) => {
+        let initRate = 0;
+        let rate = item.dataset.rate;
+        let skill = item.querySelector(".rate");
+        let span = item.querySelector("span");
+
+        let id = setInterval(() => {
+          initRate++;
+          if (rate == initRate) {
+            clearInterval(id)
+          }
+          skill.style.width=`${initRate}%`
+          span.innerText=`${initRate}%`
+        
+        }, 10);
+      });
+    </script>
+  </body>
+</html>

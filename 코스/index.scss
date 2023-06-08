@@ -1,0 +1,93 @@
+@import url(/reset.css);
+img {
+  vertical-align: top;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #eeeeee;
+  background-image: url(./images/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  position: relative;
+}
+.dim{
+    // position을 설정하면 width와 height을 지정해준다.
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    // 부모가 body이고 바로아래 자식이 dim이기떄문에
+    // width:100% 와 height:100%를 하면 화면전체에 깔린다.
+    //그래서 z-index값으로 원하는 위치로 이동시킨거다.
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+header {
+  position: fixed;
+  width: 160px;
+  background: #eeeeee;
+  height: 100vh;
+  z-index: 11;
+}
+h1 {
+  padding: 20px;
+  img {
+    width: 100%;
+  }
+}
+
+.mainmenu {
+  padding: 30px 10px;
+  li {
+    padding: 10px;
+    text-align: right;
+  }
+}
+
+section {
+  display: flex;
+  position: absolute;
+  left: 160px;
+  z-index: 10;
+
+  article {
+    width: 380px;
+    background: #fff;
+    height: 100vh;
+  }
+}
+
+a.btn {
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  background: rgba(0, 0, 0, 0.4);
+  top: 50%;
+  transform: translateY(-50%);
+  transition: .25s;
+  z-index: 11;
+  &:hover {
+    background: rgba(196, 196, 196, 0.6);}
+
+}
+
+a.prev {
+  @extend .btn; //extend 속성 : 위에 적용해둔 css속성을 공통적으로 쓸때 사용 (상속받다)
+  right: 71px;
+  display: none;
+ 
+}
+
+a.next{
+    @extend .btn;
+    right: 0;
+}
+
+a.on{
+    display: block;
+}
+
+

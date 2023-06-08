@@ -1,0 +1,272 @@
+@import url(/reset.css);
+
+@font-face {
+    font-family: jeju;
+    src: url(./font/EF_jejudoldam\(윈도우용_TTF\).ttf);
+}
+
+@font-face {
+    font-family: Nanum;
+    src: url(./font/NanumSquareNeoOTF-Bd.otf);
+}
+
+section{
+    height: 100vh;    
+}
+
+.flex{
+    display: flex;
+}
+
+#sect1{
+    background: url(./img/sect1_bg.jpg) no-repeat center / cover;
+    .inner{
+        justify-content: space-between;
+        .left{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            h1{
+                font-family: jeju;
+                color: #480F70;
+                font-size: 4rem;
+                line-height: 6rem;
+                padding: 100px;                
+            }
+            .text{
+                font-family: jeju;                
+                line-height: 60px;
+                padding-left: 150px;
+                height: 25%;
+                h2{
+                    font-size: 2rem;
+                    color: #8C6239;
+                }
+                h3{
+                    font-size: 1.5rem;
+                    color: #4B4B4B;
+                }
+            }  
+        }
+        
+        .right{
+            img{
+                width: 35vw;                
+            }
+        }
+    }
+}
+
+#sect2{
+    background: url(./img/sect2_bg.jpg) no-repeat center / cover;
+   .inner{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    .top{        
+        padding-left: 15%;
+       
+    }
+    .btm{        
+        padding-left: 15%;
+        
+    }
+    h1{
+        font-family: jeju;
+        color: #480F70;
+        font-size: 2rem;
+        padding-bottom: 5%;
+    }
+    h2{
+        font-family: Nanum;
+        font-size: 1.3rem;
+        line-height: 2.5rem;
+        color: #4B4B4B;
+    }
+   }
+}
+
+#sect3{
+    background: #FFFEF4;
+   .inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    .top{       
+        justify-content: space-evenly;    
+        padding-top: 50px;
+        h1{
+            font-family: jeju;
+            color: #480F70;
+            font-size: 2rem;
+        }
+        h2{
+            font-family: Nanum;
+            color: #4B4B4B;
+            font-size: 1.2rem;
+            line-height: 2rem;
+        }
+       }
+       .btm{       
+        text-align: center;
+        img{
+            width: 65vw;
+        }
+       }
+   }
+  
+
+}
+
+#sect4{
+    background: url(./img/sect2_bg.jpg) no-repeat center / cover;
+    .inner{
+        width: 100%;
+        h1{
+            font-family: jeju;
+            color: #480F70;
+            font-size: 2.5rem;            
+            padding: 100px;
+        }
+        .icon{            
+            height: 60vh;
+            justify-content: space-evenly;  
+            align-items: center; 
+            li{
+                img{                
+                    width: 150px;
+                    height: 130px;
+                }
+                p{
+                    line-height: 30px;
+                    padding-top: 30px;
+                    width: 150px;
+                    text-align: center;
+                    font-family: Nanum;
+                    font-size: 1.3rem;
+                    color: #8D7272;
+                }
+                &:nth-child(2){   
+                    img{height: 160px;}     
+                    p{
+                        padding: 0;
+                    }            
+                    
+                }
+            }
+            
+         
+        }
+    }
+  
+}
+
+#sect5{
+    .top{
+        height: 40vh;
+        background: #FAF6D9;
+        h1{
+            padding-top: 5%;
+        }
+        .text{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+    }
+    .btm{
+        height: 60vh;
+        background: #FFFEF4;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        figure{            
+            text-align: center;
+        }
+    }
+    h1{
+        text-align: center;
+        font-family: jeju;
+        color: #480F70;
+        font-size: 2.5rem;
+        width: 40%;    
+    }
+    h2{
+        font-family: jeju;
+        color: #4B4B4B;
+        font-size: 1.7rem;
+        line-height: 3rem;
+    }
+    p{
+        font-family: Nanum;
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+}
+
+#sect6{
+    background: url(./img/sect6_bg.jpg) no-repeat center / cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    header{
+        display: flex;       
+        h1{
+            font-family: jeju;
+            color: #480F70;
+            font-size: 2rem;            
+            width: 40%;
+            text-align: center;
+        }
+        p{
+            font-family: Nanum;
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+        }
+    }
+    figure{        
+        text-align: center;
+        img{
+            width: 55%;
+        }
+    }
+}
+
+#sect7{
+    background: #FFFEF4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    header{
+        display: flex;       
+        h1{
+            font-family: jeju;
+            color: #480F70;
+            font-size: 2rem;            
+            width: 40%;
+            text-align: center;
+        }
+        p{
+            font-family: Nanum;
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+        }
+    }
+    figure{        
+        text-align: center;
+        img{
+            width: 50%;
+        }
+    }
+}
+
+#sect8{
+    height: 140vh;
+    background: url(./img/Mockup2.jpg) no-repeat center / cover;
+}
+#sect9{
+    height: 140vh;
+    background: url(./img/Mockup1.jpg) no-repeat center / cover;
+}

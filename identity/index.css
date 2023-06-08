@@ -1,0 +1,256 @@
+@charset "UTF-8";
+@import url(/reset.css);
+@font-face {
+  font-family: jeju;
+  src: url(./font/EF_jejudoldam\(윈도우용_TTF\).ttf);
+}
+@font-face {
+  font-family: Nanum;
+  src: url(./font/NanumSquareNeoOTF-Bd.otf);
+}
+section {
+  height: 100vh;
+}
+
+.flex {
+  display: flex;
+}
+
+#sect1 {
+  background: url(./img/sect1_bg.jpg) no-repeat center/cover;
+}
+#sect1 .inner {
+  justify-content: space-between;
+}
+#sect1 .inner .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#sect1 .inner .left h1 {
+  font-family: jeju;
+  color: #480F70;
+  font-size: 4rem;
+  line-height: 6rem;
+  padding: 100px;
+}
+#sect1 .inner .left .text {
+  font-family: jeju;
+  line-height: 60px;
+  padding-left: 150px;
+  height: 25%;
+}
+#sect1 .inner .left .text h2 {
+  font-size: 2rem;
+  color: #8C6239;
+}
+#sect1 .inner .left .text h3 {
+  font-size: 1.5rem;
+  color: #4B4B4B;
+}
+#sect1 .inner .right img {
+  width: 35vw;
+}
+
+#sect2 {
+  background: url(./img/sect2_bg.jpg) no-repeat center/cover;
+}
+#sect2 .inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#sect2 .inner .top {
+  padding-left: 15%;
+}
+#sect2 .inner .btm {
+  padding-left: 15%;
+}
+#sect2 .inner h1 {
+  font-family: jeju;
+  color: #480F70;
+  font-size: 2rem;
+  padding-bottom: 5%;
+}
+#sect2 .inner h2 {
+  font-family: Nanum;
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+  color: #4B4B4B;
+}
+
+#sect3 {
+  background: #FFFEF4;
+}
+#sect3 .inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+#sect3 .inner .top {
+  justify-content: space-evenly;
+  padding-top: 50px;
+}
+#sect3 .inner .top h1 {
+  font-family: jeju;
+  color: #480F70;
+  font-size: 2rem;
+}
+#sect3 .inner .top h2 {
+  font-family: Nanum;
+  color: #4B4B4B;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+#sect3 .inner .btm {
+  text-align: center;
+}
+#sect3 .inner .btm img {
+  width: 65vw;
+}
+
+#sect4 {
+  background: url(./img/sect2_bg.jpg) no-repeat center/cover;
+}
+#sect4 .inner {
+  width: 100%;
+}
+#sect4 .inner h1 {
+  font-family: jeju;
+  color: #480F70;
+  font-size: 2.5rem;
+  padding: 100px;
+}
+#sect4 .inner .icon {
+  height: 60vh;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#sect4 .inner .icon li img {
+  width: 150px;
+  height: 130px;
+}
+#sect4 .inner .icon li p {
+  line-height: 30px;
+  padding-top: 30px;
+  width: 150px;
+  text-align: center;
+  font-family: Nanum;
+  font-size: 1.3rem;
+  color: #8D7272;
+}
+#sect4 .inner .icon li:nth-child(2) img {
+  height: 160px;
+}
+#sect4 .inner .icon li:nth-child(2) p {
+  padding: 0;
+}
+
+#sect5 .top {
+  height: 40vh;
+  background: #FAF6D9;
+}
+#sect5 .top h1 {
+  padding-top: 5%;
+}
+#sect5 .top .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#sect5 .btm {
+  height: 60vh;
+  background: #FFFEF4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#sect5 .btm figure {
+  text-align: center;
+}
+#sect5 h1 {
+  text-align: center;
+  font-family: jeju;
+  color: #480F70;
+  font-size: 2.5rem;
+  width: 40%;
+}
+#sect5 h2 {
+  font-family: jeju;
+  color: #4B4B4B;
+  font-size: 1.7rem;
+  line-height: 3rem;
+}
+#sect5 p {
+  font-family: Nanum;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+#sect6 {
+  background: url(./img/sect6_bg.jpg) no-repeat center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#sect6 header {
+  display: flex;
+}
+#sect6 header h1 {
+  font-family: jeju;
+  color: #480F70;
+  font-size: 2rem;
+  width: 40%;
+  text-align: center;
+}
+#sect6 header p {
+  font-family: Nanum;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+#sect6 figure {
+  text-align: center;
+}
+#sect6 figure img {
+  width: 55%;
+}
+
+#sect7 {
+  background: #FFFEF4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#sect7 header {
+  display: flex;
+}
+#sect7 header h1 {
+  font-family: jeju;
+  color: #480F70;
+  font-size: 2rem;
+  width: 40%;
+  text-align: center;
+}
+#sect7 header p {
+  font-family: Nanum;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+#sect7 figure {
+  text-align: center;
+}
+#sect7 figure img {
+  width: 50%;
+}
+
+#sect8 {
+  height: 140vh;
+  background: url(./img/Mockup2.jpg) no-repeat center/cover;
+}
+
+#sect9 {
+  height: 140vh;
+  background: url(./img/Mockup1.jpg) no-repeat center/cover;
+}/*# sourceMappingURL=index.css.map */

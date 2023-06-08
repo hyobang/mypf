@@ -1,0 +1,45 @@
+@media screen and (max-width: 640px) {
+  /* header area */
+  header ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .mainMenu{
+    width: 50%;
+    /* border: 1px solid #fff; */
+  }
+  .gnb{
+    border-bottom: 1px solid #fff;;
+  }
+  .mainMenu:nth-child(odd){
+    border-right: 1px solid #fff;
+  }
+
+  .mainMenu {
+    padding: 0.5rem;
+  }
+  /*  */
+  /* footer area */
+  footer {
+    font-size: 12px;
+  }
+  /* items area */
+  .itemList{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 90%;
+  }
+  .itemList li {
+    width: 48%;
+    height: 15%;
+  }
+  .itemList P{
+    text-align: center;
+    padding: 1rem 0;
+  }
+  .itemList li img {
+    width: 100%;
+    height: 100%;
+  }
+}

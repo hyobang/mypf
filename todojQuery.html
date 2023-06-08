@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jqueryTodoList</title>
+    <style>
+         body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    line-height: 1.6em;
+    padding: 20px;
+  
+  }
+
+  h2 {    
+    text-align: center;
+    color: #333;
+  }
+
+  #addBtn {
+    background-color: #5c6bc0;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  #addBtn:hover {
+    background-color: #7986cb;
+  }
+
+  #todoInput {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #5c6bc0;
+    border-radius: 3px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    background: #fff;
+    padding: 10px;
+    border-bottom: 1px #ccc dotted;
+    color: #333;
+    position: relative;
+    font-size: 18px;
+  }
+
+  li button {
+    position: absolute;
+    bottom: 10px;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-size: 16px;
+  }
+
+  li button.edit {
+    background: #4caf50;
+    right: 50px;
+  }
+
+  li button.remove {
+    background: #f44336;
+    right: 10px;
+  }
+
+  li button:hover {
+    opacity: 0.8;
+  }
+
+  .done {
+    text-decoration: line-through;
+    color: #888;
+  }
+  .edit {
+  text-decoration: none;
+}
+    </style>
+</head>
+<body>
+    <h1>할일목록</h1>
+    <input type="text" placeholder="할일추가" id="todoInput">
+    <button id="addBtn">추가</button>
+    <div id="taskCounts">전체 : 0, 완료 : 0, 할일 : 0</div>
+    <ul id="todoList"></ul>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+       var addBtn = document.getElementById('addBtn')
+        var todoInput = document.getElementById('todoInput')
+        var todoList = document.getElementById('todoList')
+        var taskCounts = document.getElementById('taskCounts')
+
+        addBtn.addEventListener('click', handleAddOrUpdate)
+
+        todoInput.addEventListener('keypress', function (e) {
+            if (e.keyCode === 13) {
+                handleAddOrUpdate()
+            }
+        })
+
+        todoList.addEventListener('click', handleListClick)
+
+        function handleAddOrUpdate() {
+            var editingTask = document.querySelector('.editing')
+            if (editingTask) {
+                updateTask(editingTask)
+            } else {
+                addTask()
+            }
+        }
+
+        function updateTask(editingTask) {
+            var span = editingTask.querySelector('span')
+            span.textContent = todoInput.value
+            editingTask.classList.remove('editing')
+            todoInput.value = ''
+            addBtn.textContent = '추가'
+            updateCounts()
+        }
+
+        function handleListClick(e) {
+            var target = e.target
+            var listItem = target.parentNode
+            if (target.classList.contains('remove')) {
+                listItem.parentNode.removeChild(listItem)
+            } else if (target.classList.contains('edit')) {
+                editTask(listItem)
+            } else {
+                target.classList.toggle('done')
+                target.classList.toggle('active')
+            }
+            updateCounts()
+        }
+
+        function editTask(listItem) {
+            var span = listItem.querySelector('span')
+            todoInput.value = span.textContent
+            listItem.classList.add('editing')
+            addBtn.textContent = '수정'
+        }
+
+        function addTask() {
+            var todoText = todoInput.value
+            if (todoText !== '') {
+                var listItem = document.createElement('li')
+                listItem.classList.add('active')
+                var span = document.createElement('span')
+                span.textContent = todoText
+                var editButton = document.createElement('button')
+                editButton.textContent = 'E'
+                editButton.classList.add('edit')
+                var removeButton = document.createElement('button')
+                removeButton.textContent = 'X'
+                removeButton.classList.add('remove')
+                listItem.appendChild(span)
+                listItem.appendChild(editButton)
+                listItem.appendChild(removeButton)
+                todoList.appendChild(listItem)
+                todoInput.value = ''
+            }
+            updateCounts()
+        }
+
+        function updateCounts() {
+            var total = todoList.children.length
+            var done = todoList.querySelectorAll('.done').length
+            var active = todoList.querySelectorAll('.active').length
+            taskCounts.textContent =
+                '전체: ' + total + ', 완료: ' + done + ', 할 일:' + active
+        }
+
+    </script>
+</body>
+</html>

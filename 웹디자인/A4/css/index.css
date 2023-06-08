@@ -1,0 +1,66 @@
+*{margin: 0; padding: 0;
+box-sizing: border-box;}
+
+li{list-style: none;}
+
+a{color: initial;
+text-decoration: none;}
+
+.flex{display: flex}
+
+/* ------------------------------------- */
+
+body{width: 1200px; margin: auto;}
+
+header{justify-content: space-between;
+border: 1px solid #000;
+align-items: center;
+position: relative;
+}
+
+nav{border: 1px solid #000;
+width: 55%;position: relative;top: 36px;}
+
+.mainmenu{flex: 1;
+text-align: center;
+position: relative;
+
+}
+nav a{display: block; padding: 5px;}
+.mainmenu>a:hover{background:  rgb(255, 60, 119); color: white;}
+.submenu li:hover>a{background: rgb(255, 240, 35);}
+
+.submenu{position: absolute;width: 100%;background-color: rgb(238, 238, 238);z-index: 999;}
+.menubg{position: absolute;background: #eee;height: 100px;width: 100%;top: 107px;}
+
+
+/* ------------------------------------------------ */
+
+.slide{height: 200px;
+overflow: hidden;}
+
+.gallery ul{margin: 20px 0;}
+.contents{gap: 10px;}
+
+.notice{font-size: 15px;}
+.notice a:hover{background: #eee;}
+
+.notice ul{margin: 22px 0;}
+.notice li a{display: flex;justify-content: space-between;
+padding: 5px;}
+
+
+/* ------------------------------------------------ */
+
+footer{text-align: center;
+justify-content: space-between;
+height: 100px;
+align-items: center;
+background: rgb(255, 60, 119);
+color: white;
+padding: 33px;}
+
+footer li{flex: 1;}
+.footermenu ul,.footermenu p{height: 50px;
+line-height: 50px;}
+.footermenu{justify-content: center; width: 80%;}

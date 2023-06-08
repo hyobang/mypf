@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>푸른마을</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <!-- .container로 싸준 이유 : header와 main을 옆으로 붙이기 위해 만든 부모 box  -->
+    <div class="container flex">
+       <header>
+                <h1>
+                    <a href="#"><img src="./images/logo.jpg" alt="헤더로고"></a>
+                </h1>
+                <nav>
+                    <ul>
+                        <li class="mainmenu"><a href="#">OnSale</a>
+                           <ul class="submenu">
+                               <li><a href="#">할인행사</a></li>
+                               <li><a href="#">덤증정</a></li>
+                           </ul>
+                        </li>
+                        <li class="mainmenu"><a href="#">기획전</a>
+                           <ul class="submenu">
+                               <li><a href="#">봄 먹거리</a></li>
+                               <li><a href="#">여름 먹거리</a></li>
+                               <li><a href="#">가을 먹거리</a></li>
+                               <li><a href="#">겨울 먹거리</a></li>
+                           </ul>
+                        </li>
+                        <li class="mainmenu"><a href="#">푸른마을 레시피</a>
+                           <ul class="submenu">
+                               <li><a href="#">메인요리</a></li>
+                               <li><a href="#">밑반찬</a></li>
+                               <li><a href="#">간식</a></li>
+                               <li><a href="#">브런치</a></li>
+                           </ul>
+                        </li>
+                        <li class="mainmenu"><a href="#">매장안내</a>
+                           <ul class="submenu">
+                               <li><a href="#">신규매장</a></li>
+                               <li><a href="#">추천매장</a></li>
+                               <li><a href="#">공지사항</a></li>
+                           </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="spotmenu flex">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                </ul>
+       </header>
+                
+       <main>
+            <div class="slideWrap">
+                <div class="slide">
+                    <a href="#"><img src="./images/slide1.jpg" alt="슬라이드1"></a>
+                </div>
+                <div class="slide">
+                    <a href="#"><img src="./images/slide2.jpg" alt="슬라이드1"></a>
+                </div>
+                <div class="slide">
+                    <a href="#"><img src="./images/slide3.jpg" alt="슬라이드1"></a>
+                </div>
+            </div>
+            <div class="contents">
+                <ul class="banner flex">
+                    <figure>배너이미지</figure>
+                    <div class="text">
+                        <h3>담백하고 고소한 무수분 삼겹살수육</h3>
+                        <p>무쇠 냄비에 삼겹살과 향신채소만 넣고 부드럽게 쪄낸 수육이에요 <br>
+                            무수분으로 요리해 식감이 쫀득하고 탱글탱글하며 향신 채소의 풍미가 잘 스며들어 누린내도 나지 않아요 <br>
+                            취향껏 쌈 채소와 새우젓, 무말랭이, 보쌈김치 등을 곁들여 맛있는 한 끼를 즐겨보세요 </p>
+                    </div>
+                    <a href="#" class="arrow"></a>
+                </ul>
+                <div class="tabbox">
+                    <ul class="tabmenu">
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">갤러리</a></li>
+                    </ul>
+                    <div class="tabcontent">
+                        <ul class="notic">
+                            <li><a href="#"><p>
+                                [오픈] 화명롯데카이저점</p></a>
+                            <span class="data">
+                                2023-02-28</span>
+                            </li>
+                            <li><a href="#"><p>
+                                [오픈] 대전문화점</p></a>
+                            <span class="data">2023-02-22</span>
+                            </li>
+                            <li><a href="#"><p>[오픈] 도곡시장점</p></a>
+                            <span class="data">
+                                2023-02-08</span>
+                            </li>
+                            <li><a href="#"><p>[오픈] 파주와동동점</p></a>
+                            <span class="data">
+                                2023-02-01</span>
+                            </li>
+                        </ul>
+                        <ul class="gallery flex">
+                            <li><a href="#"><img src="./images/gallery1.jpg" alt="갤러리1"></a></li>
+                            <li><a href="#"><img src="./images/gallery2.jpg" alt="갤러리2"></a></li>
+                            <li><a href="#"><img src="./images/gallery3.jpg" alt="갤러리3"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="link">
+                    <li><a href="#"><img src="./images/link.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="./images/link2.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="./images/link3.jpg" alt=""></a></li>
+                </ul>
+            </div>
+       </main>
+       <div class="menubg"></div>
+    </div>
+    <footer class="flex">
+        <h1><img src="./images/footer.jpg" alt="풋터로고"></h1>
+        <div class="col">
+            <ul class="flex">
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">상품입점상담</a></li>
+                <li><a href="#">가맹안내</a></li>
+                <li><a href="#">채용정보</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">이메일주소</a></li>
+                <li><a href="#">무단수집금지</a></li>
+            </ul>
+            <div class="address">
+                <address>주 ) 초록마을 서울특별시 강남구 언주로 726 8층, 11층(논현동, 두산빌딩)    대표이사 : 김재연
+                    사업자등록번호 : 105-86-05788    통신판매업신고번호 : 2022-서울강남-05777    개인정보보호책임자 : 박준태
+                    고객센터 : 080-023-0023 / 070-7549-6262    창업문의 : 1544-6266</address>
+            </div>
+        </div>
+    </footer>
+    <script src="./script/jquery-3.6.3.min.js"></script>
+    <script src="./script/index.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,169 @@
+@import url(/reset.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+.flex {
+  display: flex;
+}
+
+/* --------------------------------------------- */
+
+header {
+  max-width: 1200px;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.banner {
+  background-image: url(../images/1_20211215141252.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 300px;
+}
+
+.mainmenu {
+  gap: 30px;
+  align-items: center;
+}
+
+.icon {
+  align-items: center;
+  gap: 20px;
+}
+.icon img {
+  width: 30px;
+}
+
+img.btn {
+  width: 70px;
+}
+.contants ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contants li {
+  margin-top: 30px;
+  padding-bottom: 1rem;
+  background: #eee;
+}
+
+.contants {
+  text-align: center;
+  line-height: 1.7rem;
+}
+
+.contants img {
+  width: px;
+}
+
+.option {
+  gap: 30px;
+  height: 50px;
+  align-items: center;
+}
+
+.optionwrap {
+  margin-top: 20px;
+  gap: 20px;
+}
+.contants figure {
+  width: 100%;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #000;
+}
+
+.gallery img {
+  width: 100%;
+}
+
+footer {
+  background: #000;
+}
+
+/* -------------------------------------------------------- */
+
+/* 모바일 */
+@media screen and (max-width: 510px) {
+  .contants {
+    width: 96%;
+  }
+
+  section {
+    width: 96%;
+    margin: auto;
+  }
+
+  .contants li {
+    width: 49%;
+    font-size: 13px;
+  }
+  .footmenu img {
+    width: 100%;
+  }
+  .mainmenu {
+    display: none;
+  }
+  img {
+    width: 100%;
+  }
+  .option {
+    width: 100%;
+    gap: 20px;
+  }
+  footer img {
+    width: 100%;
+  }
+}
+
+/* 태블릿 */
+@media screen and (min-width: 511px) and (max-width: 1279px) {
+  .contants li {
+    width: 100%;
+  }
+  .option {
+    width: 100%;
+    justify-content: center;
+  }
+  footer img {
+    width: 100%;
+  }
+}
+
+/* PC */
+@media screen and (min-width: 1280px) {
+  section {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .contants li {
+    width: 24%;
+  }
+  footer img {
+    padding-left: 15%;
+  }
+}

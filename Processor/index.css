@@ -1,0 +1,245 @@
+@import url(/reset.css);
+@font-face {
+  font-family: Hyemin-Bold;
+  src: url(./font/IM_Hyemin-Bold.ttf);
+}
+@font-face {
+  font-family: Hyemin-Regular;
+  src: url(./font/IM_Hyemin-Regular.ttf);
+}
+@font-face {
+  font-family: Cute;
+  src: url(./font/insungit\ Cutelively\ jisu\ Regular.ttf);
+}
+/* -------------------------------------------------------------------- */
+section {
+  height: 100vh;
+}
+
+#sect1 {
+  background-image: linear-gradient(rgba(197, 197, 197, 0.2) 0.1em, transparent 0.3em), linear-gradient(90deg, rgba(197, 197, 197, 0.2) 0.1em, transparent 0.1em);
+  background-size: 3em 3em;
+  background-attachment: fixed;
+  font-family: Cute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 8rem;
+}
+#sect1 h1 {
+  font-size: 8rem;
+  color: #869AFB;
+}
+#sect1 h2 {
+  font-size: 5rem;
+  color: #869AFB;
+}
+#sect1 div {
+  font-size: 1.5rem;
+  position: absolute;
+  bottom: 8%;
+}
+
+#sect2 {
+  background-image: linear-gradient(rgba(197, 197, 197, 0.2) 0.1em, transparent 0.3em), linear-gradient(90deg, rgba(197, 197, 197, 0.2) 0.1em, transparent 0.1em);
+  background-size: 3em 3em;
+  background-attachment: fixed;
+}
+#sect2 ul {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#sect2 ul h2 {
+  width: 20%;
+  font-family: Cute;
+  text-align: center;
+  color: #869AFB;
+  font-size: 2.5rem;
+}
+#sect2 ul .desc {
+  width: 50%;
+  display: flex;
+  justify-content: left;
+  gap: 10%;
+}
+#sect2 ul .desc li img {
+  width: 110%;
+}
+
+#sect3 {
+  background-image: linear-gradient(rgba(197, 197, 197, 0.2) 0.1em, transparent 0.3em), linear-gradient(90deg, rgba(197, 197, 197, 0.2) 0.1em, transparent 0.1em);
+  background-size: 3em 3em;
+  background-attachment: fixed;
+}
+#sect3 ul {
+  width: 100%;
+  height: 32%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#sect3 ul h2 {
+  width: 20%;
+  font-family: Cute;
+  text-align: center;
+  color: #869AFB;
+  font-size: 2.5rem;
+}
+#sect3 ul .desc {
+  width: 50%;
+  display: flex;
+  justify-content: left;
+  gap: 10%;
+}
+#sect3 ul .desc li img {
+  width: 110%;
+}
+
+#sect4 {
+  background-image: linear-gradient(rgba(197, 197, 197, 0.2) 0.1em, transparent 0.3em), linear-gradient(90deg, rgba(197, 197, 197, 0.2) 0.1em, transparent 0.1em);
+  background-size: 3em 3em;
+  background-attachment: fixed;
+}
+#sect4 ul {
+  width: 100%;
+  height: 32%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#sect4 ul h2 {
+  width: 15%;
+  font-family: Cute;
+  text-align: center;
+  color: #869AFB;
+  font-size: 2.5rem;
+}
+#sect4 ul li img {
+  width: 110%;
+}
+#sect4 .sub {
+  display: flex;
+  height: 50%;
+}
+#sect4 .sub img {
+  width: 100%;
+}
+
+#sect5 {
+  background-attachment: fixed;
+  height: 150vh;
+  width: 100%;
+  background-color: #D8DEFF;
+}
+#sect5 .inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+#sect5 .inner article {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+#sect5 .inner article .thum {
+  display: flex;
+  align-items: center;
+  width: 700px;
+  height: 500px;
+}
+#sect5 .inner article .thum img {
+  width: 100%;
+}
+#sect5 .inner article .desc {
+  width: 35%;
+  display: flex;
+  align-items: center;
+}
+
+#sect6 {
+  height: 150vh;
+  background-color: #D8DEFF;
+}
+#sect6 .inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+#sect6 .inner article {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+#sect6 .inner article .thum {
+  display: flex;
+  align-items: center;
+  width: 700px;
+  height: 500px;
+}
+#sect6 .inner article .thum img {
+  width: 100%;
+}
+#sect6 .inner article .desc {
+  width: 35%;
+  display: flex;
+  align-items: center;
+}
+
+#sect7 {
+  height: 150vh;
+  background-image: linear-gradient(rgba(197, 197, 197, 0.2) 0.1em, transparent 0.3em), linear-gradient(90deg, rgba(197, 197, 197, 0.2) 0.1em, transparent 0.1em);
+  background-size: 3em 3em;
+  background-attachment: fixed;
+}
+#sect7 .inner {
+  background-color: #D8DEFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+}
+#sect7 .inner article {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+#sect7 .inner article .thum {
+  display: flex;
+  align-items: center;
+  width: 700px;
+  height: 500px;
+}
+#sect7 .inner article .thum img {
+  width: 100%;
+}
+#sect7 .inner article .desc {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+#sect7 .inner article .desc img {
+  width: 70%;
+}
+#sect7 div {
+  text-align: center;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#sect7 div img {
+  width: 45%;
+}/*# sourceMappingURL=index.css.map */

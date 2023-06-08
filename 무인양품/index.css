@@ -1,0 +1,65 @@
+@import url(/reset.css);
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
+  padding: 20px;
+}
+header h1 img {
+  width: 300px;
+}
+header .icon img {
+  padding: 5px;
+}
+
+.sectionContainer .sectionWrap section {
+  width: 1320px;
+  margin: auto;
+}
+.sectionContainer .sectionWrap section .inner {
+  display: flex;
+  justify-content: space-between;
+}
+.sectionContainer .sectionWrap section .inner .tabmenu {
+  border: 1px solid #000;
+  width: 200px;
+  padding-top: 60px;
+}
+.sectionContainer .sectionWrap section .inner .tabmenu li {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 17px;
+  font-weight: bold;
+  position: relative;
+}
+.sectionContainer .sectionWrap section .inner .tabmenu li:hover {
+  color: #7f0117;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.sectionContainer .sectionWrap section .inner .tabmenu li:hover .submenu {
+  display: block;
+}
+.sectionContainer .sectionWrap section .inner .tabmenu .submenu {
+  display: none;
+  position: absolute;
+  left: 200px;
+  top: 0;
+  width: 200px;
+  background-color: #333;
+  color: #fff;
+}
+.sectionContainer .sectionWrap section .inner .tabmenu .submenu li {
+  font-weight: 200;
+  font-size: 15px;
+}
+.sectionContainer .sectionWrap section .inner .tabmenu .submenu li:hover {
+  background-color: #7f0117;
+  color: #fff;
+}
+.sectionContainer .sectionWrap section .inner .vSlideContainer {
+  width: 580px;
+}
+.sectionContainer .sectionWrap section .inner .fadeSlideContainer {
+  width: 460px;
+}/*# sourceMappingURL=index.css.map */

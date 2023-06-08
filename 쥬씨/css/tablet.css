@@ -1,0 +1,46 @@
+@media screen and (min-width:641px) and (max-width:768px) {
+  body{
+    font-size: 18px;
+  }
+    /* header */
+  header ul{
+    display: flex;
+  }
+  .gnb{
+    float: right;
+    width: 15%;
+    line-height: 2.5rem;
+  }
+  .mainMenu{
+    width: 85%;
+    padding: 0.5rem 0;
+  }
+
+  .mainMenu:nth-child(2){
+    width: 100%;
+  }
+  /* item area */
+  .items h2{
+    text-align: left;
+    margin-left: 1%;
+  }
+  .itemList li{
+    height: 15%;
+    display: flex;
+  }
+  .itemList li p{
+    align-self: center;
+    flex: 1;
+    color: #ff001e;
+    font-weight: 600;
+  }
+  .itemList li img{
+    width: 35%;
+    height: 100%;
+  }
+  /* event area */
+  .events h2{
+    text-align: left;
+    margin-left: 1%;
+  }
+}

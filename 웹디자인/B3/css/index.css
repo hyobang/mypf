@@ -1,0 +1,101 @@
+*{margin: 0;padding: 0;
+box-sizing: border-box;}
+body{background-color: #fff;color: #333;}
+a{text-decoration: none;
+color: initial;}
+li{list-style: none;}
+img{vertical-align: top;}
+.flex{display: flex;}
+.inner{width: 1200px;margin: auto;}
+
+/* --------------------------------- */
+
+header{height: 100px;background: rgb(252, 216, 169);
+}
+.slidewrap{height: 300px;
+overflow: hidden;}
+.inner{justify-content: space-between;}
+header>.inner{height: 100px; align-items: center;}
+
+
+nav{width: 55%;}
+nav>ul{display: flex; justify-content: space-between;}
+
+.mainmenu{flex: 1;text-align: center;
+position: relative; padding: 10px;background: #fff;}
+.mainmenu:hover{background-color: rgb(255, 174, 68);}
+.mainmenu:hover>a{color: #fff;}
+.submenu{position: absolute; width: 100%; 
+    /* display: none; */
+    left: 0;background: #fff;}
+.submenu>li:hover{background-color: rgb(255, 174, 68);}
+.submenu:hover>a{color: #fff;}
+
+.submenu li{padding: 10px;}
+.submenu li:hover a{color: #fff;}
+
+/* -------------------------------------------------------- */
+
+.contents{height: 200px;}
+.contents>div{flex: 1;}
+
+.notic h3{width: 100px;
+    background: rgb(255, 153, 0);
+    text-align: center;padding: 5px;}
+.notic li a{display: flex;justify-content: space-between;
+    padding: 5px;}
+.notic li p{width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;}
+
+.gallery h3{width: 100px;
+        background: rgb(255, 153, 0);
+        text-align: center;
+    padding: 5px;}   
+.gallery2{height: 150px;
+    justify-content: space-between;
+   padding: 10px;}
+.banner{position: relative;}
+   .banner h3{position: absolute;
+top: 50%;left: 50%;
+transform: translate(-50%, -50%);}
+
+/* ------------------------------------------------------- */
+
+
+.modalbox{width: 40%;height: 100vh;
+background:rgba(red, green, blue, alpha);
+position: fixed;
+left: 0;
+top: 0;
+display: none;}
+
+
+.modal{width: 40%;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+position: absolute;
+background-color: #eee;
+left: 50%;
+top: 50%;
+transform: translate(-50%,-50%);}
+    
+    
+
+.closeBtn{cursor: pointer;
+padding: 5px 10px;background: #000;color: #fff;
+float: right;}
+
+
+
+
+
+
+/* --------------------------------------------------- */
+
+footer{height: 100px;
+    background: rgb(252, 216, 169);  
+}
+footer>.inner{height: 100px; align-items: center;}

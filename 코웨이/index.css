@@ -1,0 +1,360 @@
+@import url(/reset.css);
+
+.flex {
+  display: flex;
+}
+
+.headerInner {
+  justify-content: space-between;
+  width: 1400px;
+  height: 90px;
+  margin: auto;
+  align-items: center;
+}
+
+h1 {
+  width: 140px;
+}
+header {
+  height: 90px;
+  border-bottom: 1px solid #e8ecee;
+}
+
+.input {
+  width: 320px;
+  height: 42px;
+  background: #eee;
+  border-radius: 20px;
+  border: 0px solid #000;
+  position: relative;
+}
+
+input {
+  align-items: center;
+  width: 270px;
+  height: 40px;
+  background: #eee;
+  border-radius: 20px 0 0px 20px;
+  border: 0px solid #000;
+}
+
+.input img {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* -------------------------------------------- */
+
+.inner {
+  width: 1880px;
+  margin: 24px auto;
+}
+
+.menu {
+  width: 700px;
+  font-weight: bold;
+  font-size: 16px;
+  justify-content: space-evenly;
+}
+
+.menu a {
+  padding: 0px 20px;
+}
+
+.smarthome {
+  height: 348px;
+  background-image: url(./images/download1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+}
+.smarthome a {
+  display: block;
+}
+.smarthome .inner {
+  padding: 60px 0 60px 0;
+}
+.smarthome h2 {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.smarthome img {
+  width: 54px;
+  padding: 20px;
+}
+.ko_text {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px;
+}
+.en_text {
+  font-size: 14px;
+  opacity: 0.4;
+}
+.smarthome .flex {
+  width: 1200px;
+  justify-content: space-between;
+  margin: auto;
+}
+
+/* ------------------------------------------- */
+
+.mySwiper1 .swiper-slide:nth-child(1) {
+  background-image: url(./images/PC_메인_3월코웨이닷컴전용.jpg);
+}
+
+.mySwiper1 .swiper-slide:nth-child(2) {
+  background-image: url(./images/PC_메인_BEREX30일홈체험.jpg);
+}
+
+.mySwiper1 .swiper-slide:nth-child(3) {
+  background-image: url(./images/PC_메인_라이브커머스\ 2월.jpg);
+}
+
+.mySwiper1 .swiper-slide:nth-child(4) {
+  background-image: url(./images/PC_메인_현대카드프로모션.jpg);
+}
+
+.mySwiper1 .swiper-slide:nth-child(5) {
+  background-image: url(./images/PC_메인_코디매칭.jpg);
+}
+
+/* ---------------------------------------------- */
+a {
+  color: initial;
+  text-decoration: none;
+}
+
+.desc {
+  position: absolute;
+  width: 700px;
+  top: 50%;
+  left: 50%;
+  margin-left: -700px;
+  transform: translateY(-50%);
+}
+
+.desc em {
+  font-size: 20px;
+  font-style: normal;
+}
+
+.desc p {
+  margin: 10px 0 34px;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+/* --------------------------------- */
+
+.product {
+  text-align: center;
+  background-color: #f2f4f5;
+  border-radius: 10px;
+}
+.options {
+  padding-top: 55px;
+}
+
+.product p {
+  line-height: 56px;
+  font-size: 34px;
+  font-weight: bold;
+}
+.product b {
+  color: #00a8e3;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  margin: 12px;
+}
+
+.product b::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: #00a8e3;
+}
+
+.product b::after {
+  position: absolute;
+  right: -15px;
+  top: -7px;
+  content: url(./images/download.png);
+}
+
+.product .select {
+  position: relative;
+}
+ul.option {
+  background: #fff;
+  position: absolute;
+  left: 50;
+  z-index: 99;
+  display: none;
+}
+ul.option a {
+  display: block;
+  padding: 12px;
+}
+
+.option1 {
+  position: absolute;
+  left: 50%;
+  top: 70px;
+  transform: translateX(-170px);
+}
+.option2 {
+  position: absolute;
+  left: 50%;
+  top: 70px;
+  transform: translateX(-173px);
+  width: 232px;
+}
+
+.option3 {
+  position: absolute;
+  left: 50%;
+  top: 70px;
+  transform: translateX(-259px);
+  width: 248px;
+}
+
+/* ----------------------------------------------- */
+
+.story {
+  gap: 30px;
+  margin-top: 108px;
+  margin-left: 150px;
+
+  position: relative; /* 전체 구조의 윗 여백을 지정하기 위한 (margin) */
+  top: 108px;
+}
+
+.storyWrap {
+  position: relative;
+  width: 1400px;
+  height: 680px;
+  margin: auto;
+  margin: 220px;
+}
+
+.storyWrap h2 {
+  position: absolute;
+  left: 90px;
+  top: -10px;
+  font-size: 38px;
+  font-weight: 700;
+  z-index: 99;
+  line-height: 45px;
+}
+
+.storyWrap h2 b {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.storyBanner {
+  position: relative; /* 이미지를 겹치게 하기 위한 */
+  width: 870px;
+  height: 560px;
+}
+.storyBanner img {
+  width: 100%;
+  border-radius: 10px;
+  vertical-align: top;
+}
+.storyBanner li {
+  position: absolute;
+}
+
+.storyBanner li.on {
+  display: block;
+}
+
+.storyMenu li {
+  width: 280px;
+  height: 70px;
+  margin-bottom: 46px;
+  position: relative;
+  line-height: 10px;
+  border-bottom: 1px solid #bec8cc;
+}
+
+.storyMenu .num {
+  font-size: 18px;
+  font-weight: 700;
+  color: #bec8cc;
+  margin-right: 15px;
+}
+
+.arrow::after {
+  content: "";
+  position: absolute;
+  right: 70px;
+  top: 50%;
+  z-index: 1;
+  transition: 0.35s;
+  transform: translate3d(0, 0, 0);
+  width: 16px;
+  height: 14px;
+  background-image: url(./images/arr_btnTxt4.png);
+  opacity: 0;
+}
+
+.storyMenu li.on .arrow::after {
+  opacity: 1;
+  transform: translate3d(0, -50%, 0);
+}
+
+.storyMenu .txt1 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.storyMenu .txt2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 15px 0 0 35px;
+}
+
+.storyMenu a::after {
+  width: 350px;
+  background: #000;
+  content: "";
+  position: absolute;
+  height: 2px;
+  right: 0;
+  bottom: -1px;
+  display: none;
+}
+
+.storyMenu li.on a::after {
+  display: block;
+}
+
+
+/* ------------------------------------------------- */
+
+footer{width: 1400px;
+height: 300px;
+margin: auto;
+margin-top: 50px;}
+
+footer p{
+  font-size: 11px;
+  font-weight: bold;
+  color: #90a0a6; 
+  padding: 0 0 20px 5px;
+
+}
+.footerwrap{justify-content: space-between;}

@@ -1,0 +1,330 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style: none;
+}
+.flex {
+  display: flex;
+}
+img {
+  vertical-align: top;
+}
+
+/* -----------------------------------------기본 */
+
+header {
+  border-bottom: 3px solid red;
+  background: #ffe8e8;
+}
+
+.head {
+  width: 1200px;
+  height: 100px;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main {
+  width: 712px;
+  height: 892px;
+  flex-wrap: wrap;
+  gap: 17px;
+}
+
+.aside {
+  width: 488px;
+  height: 892px;
+}
+
+.inner {
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.contents {
+  width: 100%;
+}
+/* ----------------------------------------------- */
+
+.main > div:not(.notic, .candy) {
+  width: 226px;
+  height: 206px;
+  transition: 0.35s;
+}
+
+.notic,
+.candy {
+  width: 469px;
+  height: 206px;
+}
+
+.login {
+  /* 470 222 */
+  width: 470px;
+  height: 222px;
+  margin-left: 17px;
+}
+
+.slidecontainer {
+  width: 470px;
+  height: 652px;
+  margin-top: 17px;
+  margin-left: 17px;
+}
+/* flex속성인 부모가 .head이므로
+.head바로 아래 자식인 nav를 가져와서
+세로정렬을 한다. align-self
+추가적으로 정렬이 먹히게 하기위해
+여백이 있어야 한다. */
+nav {
+  align-self: flex-end;
+  width: 470px;
+}
+nav > ul {
+  justify-content: space-evenly;
+}
+.mainmenu {
+  position: relative;
+}
+.submenu {
+  position: absolute;
+  border: 1px solid #000;
+}
+/* 1. 메인메뉴 a가 block속성이 됐으니
+너비값과 높이값을 만들어둔 메뉴 이미지에 맞춰 설정한다. */
+.mainmenu > a {
+  display: block;
+  width: 140px;
+  height: 60px;
+  /* 0.기존 a값에 값이 아예없으면
+아무리 block이어도 영역이 사라지기때문에
+텍스트를 넣어주고 들여쓰기(indend)를해서
+안보이게하는 역할 ↓ */
+  text-indent: -9999px;
+  background-image: url(../images/bg_gnb.jpg);
+}
+/* 2. 만들어진 각 메뉴 이미지 너비값을
+포토샵에서 측정하여 nth-child속성으로 지정해준다. */
+.mainmenu:nth-child(1) > a {
+  width: 79px;
+}
+.mainmenu:nth-child(2) > a {
+  width: 109px;
+  background-position-x: -86px;
+}
+.mainmenu:nth-child(3) > a {
+  width: 68px;
+  background-position-x: -200px;
+}
+.mainmenu:nth-child(4) > a {
+  width: 85px;
+  background-position-x: -268px;
+}
+/* 3. 마우스를 올렸을 때 메뉴이미지가 변경되게 
+하기위해 y값을 줘서 올려준다. */
+
+.mainmenu a:hover {
+  background-position-y: -70px;
+}
+
+.submenu {
+  width: 100%;
+  display: none;
+}
+.submenu a {
+  display: block;
+  line-height: 42px;
+}
+
+/* ------------------------------------------ */
+
+.cherry {
+  background-image: url(../images/cherry.jpg);
+}
+.choco {
+  background-image: url(../images/choco.jpg);
+}
+.egg {
+  background-image: url(../images/egg.jpg);
+}
+.heart {
+  background-image: url(../images/heart.jpg);
+}
+.peach {
+  background-image: url(../images/peach.jpg);
+}
+.pink {
+  background-image: url(../images/pink.jpg);
+}
+.purple {
+  background-image: url(../images/purple.jpg);
+}
+.suk {
+  background-image: url(../images/suk.jpg);
+}
+.candy {
+  background-image: url(../images/candy.jpg);
+}
+
+/* ------------------------------------------ */
+
+.main > div:hover {
+  background-position-y: -207px;
+  transition: 0.35s;
+}
+.main > div a {
+  display: block;
+  height: 100%;
+}
+.notic {
+  position: relative;
+  background: #f7ffda;
+}
+.notic ul li a {
+  display: block;
+  width: 310px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.notic ul li {
+  justify-content: space-evenly;
+  line-height: 37px;
+}
+.notic ul li a:hover {
+  color: #ff0000;
+  font-weight: 600;
+}
+.notic h2 {
+  width: 100px;
+  margin: 5px 0 0 25px;
+  color: #ff0000;
+}
+.notic > a {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.notic img {
+  width: 30px;
+}
+
+/* ------------------------------------------- */
+.login {
+  position: relative;
+  padding-top: 10px;
+}
+.loginbox {
+  flex-direction: column;
+}
+.loginbox > input {
+  width: 360px;
+  height: 40px;
+  border: 2px solid #fca2a2;
+  padding: 10px;
+}
+/* 사용자가 반응했을때 글자 크기가 안변하게 하기위해
+placeholder만 따로 값을 지정한다.
+양식은 input + :: + placeholder */
+input::placeholder {
+  font-size: 15px;
+  font-weight: bold;
+}
+.login > button {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  width: 20%;
+  height: 80px;
+  background: #ff0000;
+  color: #ffffff;
+  border: none;
+  font-size: 17px;
+  font-weight: bold;
+}
+.check {
+  text-align: right;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+.id > a {
+  display: block;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.id > a:nth-child(1) {
+  background: #dbdbdb;
+  margin-bottom: 5px;
+}
+.id > a:nth-child(2) {
+  background: #e66161;
+  color: #ffffff;
+}
+.id {
+  margin: 10px 0;
+}
+
+/* --------------------------------------------------------- */
+
+.mySwiper img {
+  width: 475px;
+  height: 655px;
+  margin-left: 17px;
+}
+
+.mySwiper {
+  position: relative;
+
+  top: 10px;
+}
+
+.btn {
+  z-index: 999;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+
+  background: url(../images/btn_rolling_arrow.jpg) no-repeat;
+  width: 65px;
+  height: 65px;
+}
+
+.prev {
+  right: 66px;
+}
+.next {
+  right: 0;
+  background-position-x: -65px;
+}
+.slideBtn a {
+  display: block;
+}
+
+/* ----------------------------------------------------------- */
+
+footer {
+  border-top: 3px solid red;
+  margin: 30px 0;
+}
+
+footer ul {
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.footerwrap {
+  margin: auto;
+  width: 1200px;
+  margin-top: 20px;
+}

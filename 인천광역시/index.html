@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-center bg-cover bg-no-repeat h-screen lg:text-lg lg:text-xl "
+    style="background-image: url(./img/bg-header.png)"
+  >
+    <!-- sm: 640px -->
+    <!-- lg: 1024px -->
+    <!-- xl: 1280px -->
+    <header class="">
+      <h1 class="w-1/5 max-w-[150px] mt-4 ml-2">
+        <img src="./img/인천광역시.png" alt="로고" />
+      </h1>
+      <h2 class="w-1/2 min-w-[100px] max-w-[650px] mx-auto mt-7">
+        <img
+          src="./img/함께하면 이겨낼 수 있습니다. 코라나 상생 국민 지원금.png"
+          alt="텍스트 이미지"
+        />
+      </h2>
+    </header>
+    <main class="w-[95%] my-7 mx-auto xl:h-80 xl:flex flex-wrap flex-col justify-between xl:my-[10%] xl:w-[70%]">
+      <article class="lg:inline-block lg:w-[49%] xl:w-[30%] xl:h-full">
+        <div class="bg-white max-xl:my-2 drop-shadow-xl text-center xl:h-full">
+          <figure class="w-1/4 mx-auto py-4 xl:h-1/2">
+            <img
+              class="w-full max-w-[150px]"
+              src="./img/com-card01.png"
+              alt="아이콘"
+            />
+          </figure>
+          <p class="my-3">코로나 상생 국민지원금</p>
+          <button
+            class="w-[98%] py-3 mb-2 bg-blue-500 text-white font-semiblod">
+            대상자 조회 및 신청 안내
+          </button>
+        </div>
+      </article>
+      <article class="lg:inline-block lg:w-[49%] lg:float-right xl:float-none xl:w-[40%] xl:h-full ">
+        <div class="bg-white max-xl:my-2 drop-shadow-xl text-center xl:h-full">
+          <figure class="w-1/4 mx-auto py-4 xl:h-1/2">
+            <img
+              class="w-full max-w-[150px]"
+              src="./img/com-card02.png"
+              alt="아이콘"
+            />
+          </figure>
+          <p class="my-3">코로나 상생 국민지원금 신청</p>
+          <button
+            class="w-[48%] py-3 mb-2 text-white font-semiblod bg-orange-400"
+          >
+            인천e음 신청
+          </button>
+          <button
+            class="w-[48%] py-3 mb-2 text-white font-semiblod bg-blue-700"
+          >
+            카드사 신청
+          </button>
+        </div>
+      </article>
+      <article class="max-xl:my-2 w-[49%] inline-block lg:block lg:w-full xl:w-[28%] xl:h-[48%] ">
+        <div class="bg-white drop-shadow-xl text-center lg:flex lg:items-center lg:justify-center xl:h-full">
+          <figure class="w-1/4 max-lg:mx-auto py-4">
+            <img
+              class="w-full max-w-[150px] max-xl:mx-auto max-lg:float-none max-xl:float-right"
+              src="./img/com-card03.png"
+              alt="아이콘"
+            />
+          </figure>
+          <p class="font-semibold lg:px-4">코로나19</p>
+          <p class="text-cyan-500 font-bold max-lg:pb-3.5">상황판</p>
+        </div>
+      </article>
+      <article class="max-xl:my-2 w-[49%] inline-block lg:block max-lg:float-right lg:w-full xl:w-[28%] xl:h-[48%]">
+        <div class="bg-white drop-shadow-xl text-center lg:flex lg:items-center lg:justify-center xl:h-full">
+          <figure class="w-1/4 max-lg:mx-auto py-4">
+            <img
+              class="w-full max-w-[150px] max-lg:float-none max-xl:float-right"
+              src="./img/com-card04.png"
+              alt="아이콘"
+            />
+          </figure>
+          <p class="font-semibold lg:px-4">인천광역시</p>
+          <p class="text-cyan-500 font-bold max-lg:pb-3.5">대표홈페이지</p>
+        </div>
+      </article>
+    </main>
+    <footer class="bg-zinc-800 text-white h-1/4 w-full relative bottom-0">
+      <ul class="absolute w-full max-xl:top-1/2 max-xl:translate-y-[-50%] max-xl:ml-2 xl:w-[70%] xl:left-[50%] xl:translate-x-[-50%] xl:top-4">
+        <li class="h 1/4 xl:w-[49%] xl:inline-block">
+          <figure class="inline-block align-middle h-full w-8 py-1">
+            <img class="" src="./img/전화 아이콘.png" alt="콜센터아이콘" />
+          </figure>
+          <i class="not-italic">코로나 상생지원금 전담 콜센터</i>
+          <b class="text-sky-300">1533-2021</b>
+        </li>
+        <li class="h 1/4 xl:w-[49%] xl:inline-block xl:text-right">
+          <figure class="inline-block align-middle py-1">
+            <img src="./img/스피커 아이콘.png" alt="스피커아이콘" />
+          </figure>
+          <i class="not-italic">국민건강보험공단 콜센터</i>
+          <b class="text-rose-500">1577-1000</b>
+        </li>
+        <li class="h 1/4 xl:text-right">
+          <figure class="inline-block align-middle py-1 ">
+            <img src="./img/스피커 아이콘.png" alt="스피커아이콘" />
+          </figure>
+          <i class="not-italic leading-loose">질병관리본부 콜센터</i>
+          <b class="text-rose-500">1399</b>
+        </li>
+        <li class="h 1/4">
+          <i class="not-italic"
+            >21554 인천광역시 남동구 정각로29(구월동) TEL:(032)120
+            <br />@incheon Metropolitan City. All rights reserved.</i>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
