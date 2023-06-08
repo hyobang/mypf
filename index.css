@@ -211,7 +211,7 @@ section {
   overflow: hidden;
 }
 #sect2 .project .project_thum .slideContainer .slideWrap {
-  width: 400%;
+  width: 300%;
   height: 100%;
   display: flex;
   align-items: center;
